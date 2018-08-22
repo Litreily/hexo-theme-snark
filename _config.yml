@@ -1,0 +1,53 @@
+menu:
+    #- page: home
+    #directory: .
+    #icon: fa-home
+  - page: 归档
+    directory: archives/
+    #icon: fa-archive
+  - page: 标签
+    directory: tags/
+    #icon: fa-archive
+  - page: 笔记
+    directory: https://litreily.gitbooks.io/notes/
+    #icon: fa-book
+  - page: 关于
+    directory: about/
+    #icon: fa-user
+  #- page: history
+    #directory: history/
+    #icon: fa-history
+  #- page: rss
+    #directory: atom.xml
+    #icon: fa-rss
+
+widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
+  #- search
+  #- category
+  #- tag
+  #- recent_posts
+  #- recent_comments
+  #- links
+
+links:
+  - title: smslit-水木十里
+    url: https://www.smslit.top
+
+#timeline:
+    #- num: 1
+    #word: 2016/04/04 - 开始我的博客之路
+    #- num: 2
+    #word: 2016/12/12 - 更新主题至 primer，使用多说评论
+    #- num: 3
+    #word: 2017/03/23 - 因多说将要停止更新，改用Disqus
+    #- num: 4
+    #word: 2017/04/29 - 更新主题至 manupassant
+    #- num: 5
+    #word: 2017/07/20 - 大道至简，去除博客的Disqus评论功能，百度统计功能及不蒜子流量统计功能
+
+# Static files
+js: js
+css: css
+
+# Theme version
+version: 0.0.1

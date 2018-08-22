@@ -1,0 +1,50 @@
+extends base
+
+block title
+    title= config.title
+
+block more
+    script(type='text/javascript', src=url_for(theme.js) + '/ready.js' + '?v=' + theme.version, async)
+
+block content
+    .h-wrapper
+        include _partial/nav-menu.pug
+    
+    .l-wrapper
+        .l-content.box
+            .l-postlist
+                for post in page.posts.toArray()
+                    .l-post
+                        include _partial/common.pug
+                        .p-desc.box
+                            .p-pic
+                            h1.p-title
+                                a(href=url_for(post.path))
+                                    +title(post)
+
+                                if post.description
+                                    .p-content
+                                        != post.description
+                                else if post.excerpt
+                                    .p-content
+                                        != post.excerpt
+                                else if post.content
+                                    - var br = 0
+                                    - for (var i = 0; i < 5; ++i) {
+                                        - br = post.content.indexOf('\n',br+1)
+                                        if br < 0
+                                            - break
+                                        if br > 150
+                                            - break
+                                    - }
+                                    if br < 0
+                                        .post-content
+                                            != post.content
+                                    else
+                                        .post-content
+                                            != post.content.substring(0, br)
+
+                                p(class='p-readmore')
+                                    a(href=url_for(post.path))= __('ReadMore')
+
+                        .p-info.box

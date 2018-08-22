@@ -1,0 +1,11 @@
+mixin menu-item(href, name)
+    li
+        span.dot ●
+        a(href=href, class!=attributes.class)= name
+
+mixin title(page)
+    if page
+        if page.title
+            = page.title
+        else
+            = _p('no title')

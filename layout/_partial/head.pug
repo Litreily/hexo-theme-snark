@@ -1,0 +1,12 @@
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
+    meta(content='telephone=no', name='format-detection')
+    meta(name='description', content="This is my first theme")
+    block title
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
+    link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.png'))
+    script(type='text/javascript', src='//cdn.bootcss.com/jquery/3.3.1/jquery.min.js')
+    block more

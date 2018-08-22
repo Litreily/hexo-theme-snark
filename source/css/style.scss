@@ -1,0 +1,208 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both
+}
+
+body {
+    word-wrap: break-word;
+    font: 12px/200% "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+    background: url(/img/backgroud.png) repeat-y
+}
+
+body, .l-content {
+    background-color: #2d4356;
+}
+
+
+body,textarea,input,select,.m-hdimg .ttl a,.m-nav a {
+    color: #cecece;
+}
+
+textarea,input,select {
+    font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+    font-size: 12px;
+    outline: 0;
+}
+
+
+.box {
+    zoom: 1;
+}
+
+.box:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: '.';
+}
+
+a,button {
+cursor: pointer
+}
+
+a {
+    outline: 0;
+}
+
+a,a:hover {
+        text-decoration: none;
+}
+
+a,.hdimg img,.l-post .p-desc,.m-nav .dot {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/*----------------------*/
+/*head info of home page*/
+/*----------------------*/
+.h-wrapper{
+    position: relative;
+    float: left;
+    width: 400px
+}
+
+.h-head {
+    padding: 45px 0;
+}
+
+.ttl a {
+    font-weight: normal;
+}
+
+a,.m-nav a:hover,.ttl a:hover,.l-post .p-desc a:hover,.m-nav .dot,.m-pager a:hover,.m-pager-idx .active {
+    color:#0F9FB4;
+}
+.m-hdimg img,.m-about,.m-pager-idx a:hover,.m-pager-idx .active,.m-pager-dtl a,.m-sch .txt {
+    border-color:#0F9FB4;
+}
+
+.m-hdimg .ttl {
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+.m-hdimg,.m-about,.m-nav ul {
+    padding: 0 65px 0 45px
+
+}
+
+.m-hdimg img {
+    border: 2px solid #0f9fb4;
+    padding: 5px;
+    width: 128px;
+    height: 128px;
+    vertical-align: middle;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%
+}
+
+.m-hdimg img,.m-hdimg .ttl,.m-about {
+    margin-bottom: 20px;
+}
+
+
+.m-about {
+    background: #1f3140;
+    background: rgba(0,0,0,0.15);
+    border-left: 2px solid #0f9fb4;
+    padding: 20px 65px 20px 43px;
+}
+
+
+li {
+    list-style:none;
+}
+
+.m-nav ul {
+        padding-left: 20px
+
+}
+
+.m-nav li {
+    margin: 4px 0;
+}
+
+.m-nav .dot {
+    display: inline-block;
+    width: 25px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.m-nav .dot-hover {
+    opacity: 1;
+    visibility: visible
+}
+
+/* search edittext */
+.m-sch {
+    padding: 0 0 0 25px;
+}
+
+.m-sch .txt {
+    width: 140px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 0 4px;
+    border: 1px solid #0f9fb4;
+    border-width: 0 0 1px;
+    background: 0;
+}
+
+
+/*----------------------*/
+/*blog list of home page*/
+/*----------------------*/
+.l-wrapper {
+    float: right;
+    width: 100%;
+    margin-left: -400px
+}
+
+.l-content {
+    padding: 45px 0 0 400px;
+    background-clip: content-box;
+}
+
+h1.p-title {
+//   font: bold 20px "Times New Roman", sans-serif;
+//   padding-top: 0.8em;
+}
+
+.l-post {
+    padding: 0 45px 60px;
+    width: 500px;
+}
+
+.l-post .p-desc {
+    position: relative;
+    left: -90px;
+    top: 0;
+    width: 800px;
+    text-align: left;
+    padding: 2em;
+    background: white;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    a {
+        color: #2d4356;
+    }
+}
+
+
+.l-post .p-desc:hover {
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+.p-readmore{
+    text-align: right;
+}
