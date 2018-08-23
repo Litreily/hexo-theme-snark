@@ -18,7 +18,7 @@ body, .l-content {
 }
 
 
-body,textarea,input,select,.m-hdimg .ttl a,.m-nav a {
+body,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a {
     color: #cecece;
 }
 
@@ -43,7 +43,7 @@ textarea,input,select {
 }
 
 a,button {
-cursor: pointer
+    cursor: pointer
 }
 
 a {
@@ -78,10 +78,10 @@ a,.hdimg img,.l-post .p-desc,.m-nav .dot {
     font-weight: normal;
 }
 
-a,.m-nav a:hover,.ttl a:hover,.l-post .p-desc a:hover,.m-nav .dot,.m-pager a:hover,.m-pager-idx .active {
+a,.m-nav a:hover,.ttl a:hover,.l-post .p-desc a:hover,.m-nav .dot,.l-pager a:hover,.l-pager .current {
     color:#0F9FB4;
 }
-.m-hdimg img,.m-about,.m-pager-idx a:hover,.m-pager-idx .active,.m-pager-dtl a,.m-sch .txt {
+.m-hdimg img,.m-about,.l-pager a:hover,.l-pager .current,.m-pager-dtl a,.m-sch .txt {
     border-color:#0F9FB4;
 }
 
@@ -203,6 +203,30 @@ h1.p-title {
     box-shadow: 0 0 40px rgba(0,0,0,0.8);
 }
 
+.p-content {
+    color: #444;
+    font-size: 15px;
+}
+
 .p-readmore{
     text-align: right;
+}
+
+/*----------------------*/
+/*page list of home page*/
+/*----------------------*/
+.l-pager {
+    padding: 20px 45px;
+    margin-bottom: 40px;
+    background: #0d171f;
+    background: rgba(0,0,0,0.5);
+}
+
+.l-pager a, .l-pager span {
+    float: left;
+    margin-right: 15px;
+    padding: 2px;
+    border-bottom: 2px solid #0d171f;
+    border-color: rgba(0,0,0,0);
+    font-size: 14px
 }

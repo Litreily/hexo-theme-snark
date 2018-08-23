@@ -1,0 +1,3 @@
+if page.next || page.prev
+    #page-nav.l-pager.box
+        != paginator({prev_text: __('<上一页'), next_text: __('下一页>')})
