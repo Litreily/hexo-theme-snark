@@ -190,8 +190,9 @@ h1.p-title {
     top: 0;
     width: 800px;
     text-align: left;
-    padding: 2em;
     background: white;
+    padding: 2em;
+    margin-bottom: 20px;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
     a {
         color: #2d4356;
@@ -203,9 +204,15 @@ h1.p-title {
     box-shadow: 0 0 40px rgba(0,0,0,0.8);
 }
 
+.p-title {
+    padding: 0.32em 0 0.24em 0.6em;
+    border-left: 4px solid;
+}
+
 .p-content {
     color: #444;
     font-size: 15px;
+    margin: 1em 0;
 }
 
 .p-readmore{

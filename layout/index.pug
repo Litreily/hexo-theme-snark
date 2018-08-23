@@ -45,9 +45,16 @@ block content
                                 else
                                     .p-content
                                         != post.content.substring(0, br)
-                            //- readme
+                            //- readmore
                             p(class='p-readmore')
-                                a(href=url_for(post.path))= __('阅读更多')
+                                a(href=url_for(post.path))= __('阅读更多 >>')
 
                         .p-info.box
+                            span.p-meta= post.date.format(config.date_format)
+                            span= ' [ '
+                            span.p-category
+                                for category in post.categories.toArray()
+                                    a(href=url_for(category.path))= category.name
+                            span= ' ] '
+
             include _partial/paginator.pug
