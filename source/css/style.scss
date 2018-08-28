@@ -1,4 +1,4 @@
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,article {
     margin: 0;
     padding: 0;
 }
@@ -184,33 +184,34 @@ h1.p-title {
     width: 500px;
 }
 
-.l-post .p-desc {
+.l-post .p-desc, article .p-art {
     position: relative;
     left: -90px;
     top: 0;
     width: 800px;
     text-align: left;
-    background: white;
     padding: 2em;
     margin-bottom: 20px;
+    // backgroud options: #152029 #2d4356 
+    background: #152029;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
-    a {
-        color: #2d4356;
-    }
 }
 
+.l-post .p-desc a {
+    color: #cecece;
+}
 
 .l-post .p-desc:hover {
     box-shadow: 0 0 40px rgba(0,0,0,0.8);
 }
 
-.p-title {
+.p-desc .p-title {
     padding: 0.32em 0 0.24em 0.6em;
     border-left: 4px solid;
 }
 
 .p-content {
-    color: #444;
+    color: #cecece;
     font-size: 15px;
     margin: 1em 0;
 }
@@ -237,3 +238,9 @@ h1.p-title {
     border-color: rgba(0,0,0,0);
     font-size: 14px
 }
+
+
+/*----------------------*/
+/*style of post content */
+/*----------------------*/
+

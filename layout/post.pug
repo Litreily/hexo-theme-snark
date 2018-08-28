@@ -1,1 +1,13 @@
 extends base
+
+block title
+    title= page.title + ' | ' + config.title
+
+block content
+    .l-wrapper
+        .l-content.box
+            article.l-post
+                .p-art
+                    h1.p-title= page.title
+                    .post-content
+                        != page.content
