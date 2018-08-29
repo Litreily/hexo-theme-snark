@@ -54,11 +54,16 @@ a,a:hover {
         text-decoration: none;
 }
 
-a,.hdimg img,.l-post .p-desc,.m-nav .dot {
+a,img,.hdimg img,.l-post .p-desc,.m-nav .dot {
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+}
+
+/*---------image--------*/
+.p-content img {
+    max-width: 100%;
 }
 
 /*----------------------*/
