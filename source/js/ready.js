@@ -4,4 +4,6 @@ $(document).ready(function() {
     }, function() {
                 $(this).prev().removeClass("dot-hover")
     })
+    $("pre").addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+    prettyPrint();
 });

@@ -3,9 +3,6 @@ extends base
 block title
     title= config.title
 
-block more
-    script(type='text/javascript', src=url_for(theme.js) + '/ready.js' + '?v=' + theme.version, async)
-
 block content
     .l-wrapper
         .l-content.box

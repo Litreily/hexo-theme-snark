@@ -1,6 +1,9 @@
 doctype html
 html(lang='en')
     include _partial/head.pug
+    block more
+        link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
+        script(type='text/javascript', src=url_for(theme.js) + '/ready.js' + '?v=' + theme.version, async)
 
     body: #container.box
         .h-wrapper
@@ -8,4 +11,4 @@ html(lang='en')
         block content
 
         include _partial/footer.pug
-        
+
