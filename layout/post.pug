@@ -4,8 +4,9 @@ block title
     title= page.title + ' | ' + config.title
 
 block content
-    article.l-post
-        .p-art
+    .l-post
+        article.p-art
             h1.p-title= page.title
             .p-content
                 != page.content
+    include _partial/post-jump.pug

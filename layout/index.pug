@@ -50,7 +50,7 @@ block content
                     span= ' ] < '
                     span.p-tags
                         for tag in post.tags.toArray()
-                            a(href=url_for(tag.path))= tag.name + ' '
+                            a(href=url_for(tag.path))= '#' + tag.name + ' '
                     span= '>'
 
     include _partial/paginator.pug
