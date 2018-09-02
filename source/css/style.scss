@@ -54,7 +54,7 @@ a,a:hover {
         text-decoration: none;
 }
 
-a,img,.hdimg img,.l-post .p-desc,.m-nav .dot {
+a,img,h1,.hdimg img,.l-post .p-desc,.m-nav .dot {
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
@@ -83,9 +83,10 @@ a,img,.hdimg img,.l-post .p-desc,.m-nav .dot {
     font-weight: normal;
 }
 
-a,.m-nav a:hover,.ttl a:hover,.l-post .p-desc a:hover,.m-nav .dot,.l-pager a:hover,.l-pager .current {
+a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hover,.l-pager .current,footer a:hover,.p-info a:hover {
     color:#0F9FB4;
 }
+
 .m-hdimg img,.m-about,.l-pager a:hover,.l-pager .current,.m-pager-dtl a,.m-sch .txt {
     border-color:#0F9FB4;
 }
@@ -179,11 +180,6 @@ li {
     background-clip: content-box;
 }
 
-h1.p-title {
-//   font: bold 20px "Times New Roman", sans-serif;
-//   padding-top: 0.8em;
-}
-
 .l-post {
     padding: 0 45px 60px;
     width: 500px;
@@ -249,3 +245,14 @@ h1.p-title {
 /*style of post content */
 /*----------------------*/
 
+
+/*----------------------*/
+/*style of ext info     */
+/*----------------------*/
+footer{
+    padding: 20px 45px;
+}
+
+.p-info span,.p-info a, footer p, footer a{
+    color: #999
+}

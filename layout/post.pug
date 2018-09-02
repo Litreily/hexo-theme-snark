@@ -4,10 +4,8 @@ block title
     title= page.title + ' | ' + config.title
 
 block content
-    .l-wrapper
-        .l-content.box
-            article.l-post
-                .p-art
-                    h1.p-title= page.title
-                    .p-content
-                        != page.content
+    article.l-post
+        .p-art
+            h1.p-title= page.title
+            .p-content
+                != page.content

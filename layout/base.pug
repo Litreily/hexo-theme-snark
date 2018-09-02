@@ -8,7 +8,8 @@ html(lang='en')
     body: #container.box
         .h-wrapper
             include _partial/nav-menu.pug
-        block content
+        .l-wrapper
+            .l-content.box
+                block content
 
-        include _partial/footer.pug
-
+                include _partial/footer.pug

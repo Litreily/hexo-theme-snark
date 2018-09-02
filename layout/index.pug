@@ -4,51 +4,53 @@ block title
     title= config.title
 
 block content
-    .l-wrapper
-        .l-content.box
-            .l-postlist
-                for post in page.posts.toArray()
-                    .l-post
-                        include _partial/common.pug
-                        .p-desc.box
-                            .p-pic
-                            //- title
-                            h1.p-title
-                                a(href=url_for(post.path))
-                                    +title(post)
+    .l-postlist
+        for post in page.posts.toArray()
+            .l-post
+                include _partial/common.pug
+                .p-desc.box
+                    .p-pic
+                    //- title
+                    h1.p-title
+                        a(href=url_for(post.path))
+                            +title(post)
 
-                            //- description
-                            if post.description
-                                .p-content
-                                    != post.description
-                            else if post.excerpt
-                                .p-content
-                                    != post.excerpt
-                            else if post.content
-                                - var br = 0
-                                - for (var i = 0; i < 5; ++i) {
-                                    - br = post.content.indexOf('\n',br+1)
-                                    if br < 0
-                                        - break
-                                    if br > 150
-                                        - break
-                                - }
-                                if br < 0
-                                    .p-content
-                                        != post.content
-                                else
-                                    .p-content
-                                        != post.content.substring(0, br)
-                            //- readmore
-                            p(class='p-readmore')
-                                a(href=url_for(post.path))= __('阅读更多 >>')
+                    //- description
+                    if post.description
+                        .p-content
+                            != post.description
+                    else if post.excerpt
+                        .p-content
+                            != post.excerpt
+                    else if post.content
+                        - var br = 0
+                        - for (var i = 0; i < 5; ++i) {
+                            - br = post.content.indexOf('\n',br+1)
+                            if br < 0
+                                - break
+                            if br > 150
+                                - break
+                        - }
+                        if br < 0
+                            .p-content
+                                != post.content
+                        else
+                            .p-content
+                                != post.content.substring(0, br)
+                    //- readmore
+                    p(class='p-readmore')
+                        a(href=url_for(post.path))= __('阅读更多 >>')
 
-                        .p-info.box
-                            span.p-meta= post.date.format(config.date_format)
-                            span= ' [ '
-                            span.p-category
-                                for category in post.categories.toArray()
-                                    a(href=url_for(category.path))= category.name
-                            span= ' ] '
+                .p-info.box
+                    span.p-meta= post.date.format(config.date_format)
+                    span= ' [ '
+                    span.p-category
+                        for category in post.categories.toArray()
+                            a(href=url_for(category.path))= category.name
+                    span= ' ] < '
+                    span.p-tags
+                        for tag in post.tags.toArray()
+                            a(href=url_for(tag.path))= tag.name + ' '
+                    span= '>'
 
-            include _partial/paginator.pug
+    include _partial/paginator.pug
