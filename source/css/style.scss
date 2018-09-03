@@ -18,7 +18,7 @@ body, .l-content, blockquote {
 }
 
 
-body,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a {
+body,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a,.p-content,.l-post .p-desc a {
     color: #cecece;
 }
 
@@ -191,15 +191,11 @@ li {
     top: 0;
     width: 800px;
     text-align: left;
-    padding: 24px;
+    padding: 32px;
     margin-bottom: 20px;
     // backgroud options: #152029 #2d4356 
     background: #152029;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
-}
-
-.l-post .p-desc a {
-    color: #cecece;
 }
 
 .l-post .p-desc:hover {
@@ -213,7 +209,6 @@ li {
 }
 
 .p-content {
-    color: #cecece;
     font-size: 15px;
     margin: 1em 0;
 }
@@ -257,13 +252,22 @@ li {
     }
 
     p {
-        margin: 0.6em 0 0.4em;
+        margin: 0 0 1em;
+    }
+
+    img {
+        margin: 1em 0;
     }
 
     code {
     padding: 0 0.4em;
     margin: 0 0.2em;
     border-radius: 0.3em !important;
+    }
+
+    pre {
+        margin-top: 18px !important;
+        margin-bottom: 18px !important;
     }
 
     pre code {
