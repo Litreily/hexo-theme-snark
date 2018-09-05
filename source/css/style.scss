@@ -252,22 +252,21 @@ li {
     }
 
     p {
-        margin: 0 0 1em;
-    }
-
-    img {
         margin: 1em 0;
     }
 
     code {
-    padding: 0 0.4em;
-    margin: 0 0.2em;
-    border-radius: 0.3em !important;
+        padding: 0 0.4em;
+        margin: 0 0.2em;
+        border-radius: 0.3em !important;
     }
 
     pre {
         margin-top: 18px !important;
         margin-bottom: 18px !important;
+        ol li {
+            margin-left: 36px;
+        }
     }
 
     pre code {
@@ -275,11 +274,18 @@ li {
         margin: 0 0.01em;
         border-radius: 0 !important;
     }
+
+    ul>li, ol>li {
+        list-style: inherit;
+        margin-left: 36px;
+    }
 }
 
 blockquote {
-    margin: 24px -24px;
-    padding: 6px 16px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 24px -32px;
+    padding: 0.5em 0 0.5em 24px;
     border-left: 8px solid #7166f7;
 }
 
