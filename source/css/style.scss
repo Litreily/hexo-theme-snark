@@ -87,7 +87,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     color:#0F9FB4;
 }
 
-.m-hdimg img,.m-about,.l-pager a:hover,.l-pager .current,.m-pager-dtl a,.m-sch .txt {
+.m-hdimg img,.m-about,.l-pager a:hover,.l-pager .current,.l-pager-dtl a,.m-sch .txt {
     border-color:#0F9FB4;
 }
 
@@ -182,7 +182,11 @@ li {
 
 .l-post {
     padding: 0 45px 60px;
-    width: 500px;
+    width: 600px;
+}
+
+.l-post-art {
+    padding-bottom: 0;
 }
 
 .l-post .p-desc, article.p-art {
@@ -222,26 +226,43 @@ li {
 /*----------------------*/
 .l-pager {
     padding: 20px 45px;
+}
+
+.l-pager-id {
     margin-bottom: 40px;
     background: #0d171f;
     background: rgba(0,0,0,0.5);
+
+    a, span {
+        float: left;
+        margin-right: 15px;
+        padding: 2px;
+        border-bottom: 2px solid #0d171f;
+        border-color: rgba(0,0,0,0);
+        font-size: 14px
+    }
 }
 
-.l-pager a, .l-pager span {
-    float: left;
-    margin-right: 15px;
-    padding: 2px;
-    border-bottom: 2px solid #0d171f;
-    border-color: rgba(0,0,0,0);
-    font-size: 14px
-}
+.l-pager-dtl {
+    padding-top: 0;
+    max-width: 600px;
 
+    a {
+        float: left;
+        padding: 2px;
+        margin-bottom: 16px;
+        border-bottom: 2px solid #0f9fb4;
+        font-size: 16px
+    }
+
+    .next {
+        float: right;
+    }
+}
 
 /*----------------------*/
 /*style of post content */
 /*----------------------*/
-
-
 .p-art h1 {
     margin: 0.6em 0 1em;
 }
