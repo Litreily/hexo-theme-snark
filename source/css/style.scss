@@ -1,29 +1,45 @@
+/* parameters definition */
+// font
+$font-base : 15px;
+$font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+
+// color
+$purple: #2d4356;
+$dark-purple: #152029;
+$light: #cecece;
+$blue: #0F9FB4;
+$dark-blue: #7166f7;
+
+// width
+$head-width: 400px;
+$art-width: 800px;
+$art-padding: 45px;
+$art-left-offset: -($art-padding * 2);
+$info-width: $art-width - $art-padding;
+
+
 html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,article {
     margin: 0;
     padding: 0;
 }
 
-.clear {
-    clear: both
-}
-
 body {
     word-wrap: break-word;
-    font: 12px/200% "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+    font: 12px/200% $font-family;
     background: url(/img/backgroud.png) repeat-y
 }
 
 body, .l-content, blockquote {
-    background-color: #2d4356;
+    background-color: $purple;
 }
 
 
 body,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a,.p-content,.l-post .p-desc a {
-    color: #cecece;
+    color: $light;
 }
 
 textarea,input,select {
-    font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+    font-family: $font-family;
     font-size: 12px;
     outline: 0;
 }
@@ -61,18 +77,13 @@ a,img,h1,.hdimg img,.l-post .p-desc,.m-nav .dot {
     transition: all .3s ease;
 }
 
-/*---------image--------*/
-.p-content img {
-    max-width: 100%;
-}
-
 /*----------------------*/
 /*head info of home page*/
 /*----------------------*/
 .h-wrapper{
     position: relative;
     float: left;
-    width: 400px
+    width: $head-width;
 }
 
 .h-head {
@@ -84,11 +95,11 @@ a,img,h1,.hdimg img,.l-post .p-desc,.m-nav .dot {
 }
 
 a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hover,.l-pager .current,footer a:hover,.p-info a:hover {
-    color:#0F9FB4;
+    color:$blue;
 }
 
 .m-hdimg img,.m-about,.l-pager a:hover,.l-pager .current,.l-pager-dtl a,.m-sch .txt {
-    border-color:#0F9FB4;
+    border-color:$blue;
 }
 
 .m-hdimg .ttl {
@@ -102,7 +113,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 }
 
 .m-hdimg img {
-    border: 2px solid #0f9fb4;
+    border: 2px solid $blue;
     padding: 5px;
     width: 128px;
     height: 128px;
@@ -120,7 +131,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 .m-about {
     background: #1f3140;
     background: rgba(0,0,0,0.15);
-    border-left: 2px solid #0f9fb4;
+    border-left: 2px solid $blue;
     padding: 20px 65px 20px 43px;
 }
 
@@ -160,7 +171,7 @@ li {
     height: 20px;
     line-height: 20px;
     padding: 0 0 4px;
-    border: 1px solid #0f9fb4;
+    border: 1px solid $blue;
     border-width: 0 0 1px;
     background: 0;
 }
@@ -172,17 +183,17 @@ li {
 .l-wrapper {
     float: right;
     width: 100%;
-    margin-left: -400px
+    margin-left: -#{$head-width};
 }
 
 .l-content {
-    padding: 45px 0 0 400px;
+    padding: $art-padding 0 0 $head-width;
     background-clip: content-box;
 }
 
 .l-post {
-    padding: 0 45px 60px;
-    width: 755px;
+    padding: 0 $art-padding 60px;
+    width: $info-width;
 }
 
 .l-post-art {
@@ -191,14 +202,13 @@ li {
 
 .l-post .p-desc, article.p-art {
     position: relative;
-    left: -90px;
+    left: $art-left-offset;
     top: 0;
-    width: 800px;
+    width: $art-width;
     text-align: left;
-    padding: 45px;
+    padding: $art-padding;
     margin-bottom: 20px;
-    // backgroud options: #152029 #2d4356 
-    background: #152029;
+    background: $dark-purple;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
 }
 
@@ -206,14 +216,8 @@ li {
     box-shadow: 0 0 40px rgba(0,0,0,0.8);
 }
 
-.p-desc .p-title {
-    //padding: 0.32em 0 0.24em 0.6em;
-    padding: 0.32em 0 0.24em;
-    //border-left: 4px solid;
-}
-
 .p-content {
-    font-size: 15px;
+    font-size: $font-base;
     margin: 1em 0;
 }
 
@@ -225,7 +229,7 @@ li {
 /*page list of home page*/
 /*----------------------*/
 .l-pager {
-    padding: 20px 45px;
+    padding: 20px $art-padding;
 }
 
 .l-pager-id {
@@ -245,13 +249,13 @@ li {
 
 .l-pager-dtl {
     padding-top: 0;
-    max-width: 755px;
+    max-width: $info-width;
 
     a {
         float: left;
         padding: 2px;
         margin-bottom: 16px;
-        border-bottom: 2px solid #0f9fb4;
+        border-bottom: 2px solid $blue;
         font-size: 16px
     }
 
@@ -263,17 +267,22 @@ li {
 /*----------------------*/
 /*style of post content */
 /*----------------------*/
-.p-art h1 {
-    margin: 0.6em 0 1em;
-}
-
 .p-content {
-    h1,h2,h3,h4 {
+    h2,h3,h4 {
         margin: 1.6em 0 0.6em;
     }
 
     p {
         margin: 1em 0;
+    }
+    
+    a:hover {
+        opacity: 0.6;
+    }
+
+    img {
+        max-width: 100%;
+        margin: 15px 0;
     }
 
     code {
@@ -305,13 +314,18 @@ li {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 24px -45px;
-    padding: 0.5em 0 0.5em 24px;
-    border-left: 8px solid #7166f7;
+    margin: 24px -#{$art-padding};
+    padding: 0.5em $art-padding 0.5em ($art-padding - 8px);
+    border-left: 8px solid $dark-blue;
+    ol, ul{
+        padding-bottom: 1em;
+    }
 }
 
 h1{
-    font-size: 2em;
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 0 0 1em;
 }
 
 h2{
@@ -329,7 +343,7 @@ h4{
 /*style of ext info     */
 /*----------------------*/
 footer{
-    padding: 20px 45px;
+    padding: 20px $art-padding;
 }
 
 .p-info span,.p-info a, footer p, footer a{
