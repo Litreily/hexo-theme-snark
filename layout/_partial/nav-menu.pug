@@ -5,7 +5,8 @@ nav.h-head.box
         h1.ttl
             a(href="/")= config.title
 
-    p.m-about 爱创作、爱开发、爱就在路上！<br>个人博客：www.litreily.top
+    if theme.description
+        p.m-desc!= theme.description
 
     .m-nav
         ul

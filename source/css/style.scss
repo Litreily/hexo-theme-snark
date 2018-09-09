@@ -24,6 +24,7 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
 }
 
 body {
+    min-width: 800px;
     word-wrap: break-word;
     font: 12px/200% $font-family;
     background: url(/img/backgroud.png) repeat-y
@@ -77,6 +78,16 @@ a,img,h1,.hdimg img,.l-post .p-desc,.m-nav .dot {
     transition: all .3s ease;
 }
 
+
+hr {
+    margin: 2em auto;
+    border: none;
+}
+
+hr, h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 /*----------------------*/
 /*head info of home page*/
 /*----------------------*/
@@ -98,7 +109,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     color:$blue;
 }
 
-.m-hdimg img,.m-about,.l-pager a:hover,.l-pager .current,.l-pager-dtl a,.m-sch .txt {
+.m-hdimg img,.m-desc,.l-pager a:hover,.l-pager .current,.l-pager-dtl a,.m-sch .txt {
     border-color:$blue;
 }
 
@@ -107,7 +118,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     letter-spacing:1px;
 }
 
-.m-hdimg,.m-about,.m-nav ul {
+.m-hdimg,.m-desc,.m-nav ul {
     padding: 0 65px 0 45px
 
 }
@@ -123,12 +134,12 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     border-radius: 50%
 }
 
-.m-hdimg img,.m-hdimg .ttl,.m-about {
+.m-hdimg img,.m-hdimg .ttl,.m-desc {
     margin-bottom: 20px;
 }
 
 
-.m-about {
+.m-desc {
     background: #1f3140;
     background: rgba(0,0,0,0.15);
     border-left: 2px solid $blue;
@@ -283,6 +294,7 @@ li {
     img {
         max-width: 100%;
         margin: 15px 0;
+        vertical-align: middle;
     }
 
     code {
@@ -330,6 +342,7 @@ h1{
 
 h2{
     font-size: 1.5em;
+    line-height: 1.6;
 }
 
 h3{

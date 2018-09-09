@@ -1,7 +1,8 @@
 mixin menu-item(href, name)
+    - var url=url_for(href)
     li
         span.dot ●
-        a(href=href, class!=attributes.class)= name
+        a(href=url, class!=attributes.class)= name
 
 mixin title(page)
     if page
