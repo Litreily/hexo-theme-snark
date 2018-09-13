@@ -3,7 +3,7 @@ html(lang='en')
     include _partial/head.pug
     block more
         link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
-        script(type='text/javascript', src=url_for(theme.js) + '/ready.js' + '?v=' + theme.version, async)
+        script(type='text/javascript', src=url_for(theme.js) + '/ready.js', async)
 
     body: #container.box
         .h-wrapper
