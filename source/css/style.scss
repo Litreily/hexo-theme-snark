@@ -11,12 +11,18 @@ $blue: #0F9FB4;
 $dark-blue: #7166f7;
 
 // width
-$head-width: 400px;
+$head-width: 350px;
 $art-width: 800px;
-$art-padding: 45px;
+$art-padding: 40px;
 $art-left-offset: -($art-padding * 2);
 $info-width: $art-width - $art-padding;
 
+// @mixin box-sizing
+@mixin box-sizing($box:border-box) {
+    box-sizing: $box;
+    -moz-box-sizing: $box;
+    -webkit-box-sizing: $box;
+}
 
 /*----------------------*/
 /*basic stype of web    */
@@ -27,10 +33,11 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
 }
 
 body {
-    min-width: 800px;
+    //width: 800px;
     word-wrap: break-word;
     font: 12px/200% $font-family;
-    background: url(/img/backgroud.png) repeat-y
+    background: url(/img/backgroud.png) repeat-y;
+    background-position-x: $head-width - 400px;
 }
 
 body, .l-content, blockquote {
@@ -81,8 +88,7 @@ hr, h2 {
 }
 
 blockquote {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
     margin: 24px -#{$art-padding};
     padding: 0.5em $art-padding 0.5em ($art-padding - 8px);
     border-left: 8px solid $dark-blue;
@@ -226,13 +232,14 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 }
 
 .l-content {
-    padding: $art-padding 0 0 $head-width;
+    padding: 45px 0 0 $head-width;
     background-clip: content-box;
 }
 
 .l-post {
     padding: 0 $art-padding 60px;
-    width: $info-width;
+    width: 100%;
+    @include box-sizing(border-box);
 }
 
 .l-post-art {
@@ -243,7 +250,8 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     position: relative;
     left: $art-left-offset;
     top: 0;
-    width: $art-width;
+    width: 100%;
+    max-width: $art-width;
     text-align: left;
     padding: $art-padding;
     margin-bottom: 20px;
