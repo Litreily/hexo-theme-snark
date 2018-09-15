@@ -10,7 +10,7 @@ block title
 
 block content
     if page.category || page.tag
-        h1.label-title=  __('reading_label', page.category || page.tag)
+        h1.label-title=  __(page.category || page.tag)
     .p-archive
         //Use lodash to classify posts. See https://lodash.com/docs#groupBy
         each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
