@@ -6,9 +6,14 @@ $font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,s
 // color
 $purple: #2d4356;
 $dark-purple: #152029;
-$light: #cecece;
+$light: #CECECE;
 $blue: #0F9FB4;
-$dark-blue: #7166f7;
+$dark-blue: #7166F7;
+$gray1: #333;
+$gray2: #666;
+$gray3: #999;
+$gray4: #CCC;
+
 
 // width
 $head-width: 350px;
@@ -33,7 +38,6 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
 }
 
 body {
-    //width: 800px;
     word-wrap: break-word;
     font: 12px/200% $font-family;
     background: url(/img/backgroud.png) repeat-y;
@@ -239,6 +243,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 .l-post {
     padding: 0 $art-padding 60px;
     width: 100%;
+    min-width: 300px;
     @include box-sizing(border-box);
 }
 
@@ -343,10 +348,36 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
         }
     }
 
+    //overwrite doxy.css
+    pre.prettyprint {
+        width: initial;
+        max-width: 95%;
+    }
+
     pre code {
         padding: 0;
         margin: 0 0.01em;
         border-radius: 0 !important;
+    }
+
+    table {
+        display: inline-block;
+        max-width: 100%;
+        border: 1px solid $gray1;
+        border-collapse: separate;
+        border-spacing: 0;
+        vertical-align: middle;
+        overflow-x: auto;
+
+        tr:nth-child(2n) {
+            background: $gray1;
+        }
+    }
+    th, td {
+        padding: 0.2em 1em;
+        text-align: left;
+        vertical-align: middle;
+        word-break: keep-all;
     }
 
 }
