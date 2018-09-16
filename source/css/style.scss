@@ -236,6 +236,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 }
 
 .l-content {
+    min-width: 400px;
     padding: 45px 0 0 $head-width;
     background-clip: content-box;
 }
@@ -243,7 +244,6 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 .l-post {
     padding: 0 $art-padding 60px;
     width: 100%;
-    min-width: 300px;
     @include box-sizing(border-box);
 }
 
