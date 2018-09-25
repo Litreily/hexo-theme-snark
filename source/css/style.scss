@@ -334,8 +334,12 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     pre {
         margin-top: 18px !important;
         margin-bottom: 18px !important;
+        ol {
+            overflow: auto;
+        }
         ol li {
             margin-left: 32px;
+            white-space: pre;
         }
     }
 
