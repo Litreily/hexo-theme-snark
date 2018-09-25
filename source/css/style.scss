@@ -21,7 +21,8 @@ $art-width: 800px;
 $art-padding: 40px;
 $art-left-offset: -($art-padding * 2);
 $info-width: $art-width - $art-padding;
-$min-screen-width: 775px;
+$middle-screen-width: 775px;
+$min-screen-width: 500px;
 
 // box-sizing
 @mixin box-sizing($box:border-box) {
@@ -41,33 +42,6 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
 body {
     word-wrap: break-word;
     font: 12px/200% $font-family;
-}
-
-@media print, screen and (min-width:$min-screen-width + 1){
-    body {
-        background-image: url(/img/backgroud.png);
-        background-repeat: repeat-y;
-        background-position-x: $head-width - 400px;
-    }
-
-    .l-wrapper {
-        margin-left: -#{$head-width};
-    }
-
-    .l-content{
-        padding-left: $head-width;
-    }
-
-    .l-post .p-desc, article.p-art {
-        left: $art-left-offset;
-        width: 100%;
-    }
-}
-
-@media print, screen and (max-width:$min-screen-width){
-    .h-wrapper{
-        display:none;
-    }
 }
 
 body, .l-content, blockquote {
@@ -256,7 +230,6 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 }
 
 .l-content {
-    min-width: 400px;
     padding-top: 45px;
     background-clip: content-box;
 }
@@ -362,7 +335,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
         margin-top: 18px !important;
         margin-bottom: 18px !important;
         ol li {
-            margin-left: 36px;
+            margin-left: 32px;
         }
     }
 
@@ -431,3 +404,80 @@ footer{
     margin: 1em 0;
 }
 
+
+/*----------------------*/
+/*Screen adaptation     */
+/*----------------------*/
+@media print, screen and (min-width:$middle-screen-width + 1){
+    body {
+        background-image: url(/img/backgroud.png);
+        background-repeat: repeat-y;
+        background-position-x: $head-width - 400px;
+    }
+
+    .l-wrapper {
+        margin-left: -#{$head-width};
+    }
+
+    .l-content{
+        padding-left: $head-width;
+    }
+
+    .l-post .p-desc, article.p-art {
+        left: $art-left-offset;
+        width: 100%;
+    }
+}
+
+@media print, screen and (max-width:$middle-screen-width){
+    $middle-space: 20px;    
+
+    .h-wrapper {
+        display:none;
+    }
+
+    .l-post {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .l-post .p-info {
+        padding: 0 $middle-space;
+    }
+
+    .l-post .p-desc, article.p-art {
+        padding: 2em $middle-space;
+    }
+
+    blockquote {
+        margin-left: -$middle-space;
+        margin-right: -$middle-space;
+    }
+
+    .l-pager, footer {
+        padding: $middle-space;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+@media print, screen and (max-width:$min-screen-width){
+    .l-post {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .p-content pre.prettyprint {
+        max-width: initial;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        -moz-border-radius: 0;
+        -webkit-border-radius:0;
+        -o-border-radius: 0;
+        -ms-border-radius: 0;
+        -khtml-border-radius: 0;
+        border-radius:0;
+    }
+}
