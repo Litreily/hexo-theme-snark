@@ -9,4 +9,8 @@ block content
             h1.p-title= page.title
             .p-content
                 != page.content
-    include _partial/post-jump.pug
+    section.p-ext
+        include _partial/post-jump.pug
+
+        if page.comments
+          include _partial/comments.pug

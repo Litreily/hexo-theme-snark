@@ -17,11 +17,11 @@ $gray4: #CCC;
 
 // width
 $head-width: 360px;
-$art-width: 800px;
+$art-width: 840px;
 $art-padding: 40px;
 $art-left-offset: -($art-padding * 2);
 $info-width: $art-width - $art-padding;
-$middle-screen-width: 775px;
+$middle-screen-width: 900px;
 $min-screen-width: 500px;
 
 // box-sizing
@@ -271,11 +271,8 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 /*----------------------*/
 /*page list of home page*/
 /*----------------------*/
-.l-pager {
-    padding: 20px $art-padding;
-}
-
 .l-pager-id {
+    padding: 20px $art-padding;
     margin-bottom: 40px;
     background: #0d171f;
     background: rgba(0,0,0,0.5);
@@ -291,9 +288,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 }
 
 .l-pager-dtl {
-    padding-top: 0;
-    max-width: $info-width;
-
+    padding-bottom: 20px;
     a {
         float: left;
         padding: 2px;
@@ -305,6 +300,12 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     .next {
         float: right;
     }
+}
+
+.p-ext {
+    padding: 20px $art-padding;
+    max-width: $info-width;
+
 }
 
 /*----------------------*/
@@ -440,7 +441,7 @@ footer{
         display:none;
     }
 
-    .l-post {
+    .l-post,.p-ext {
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -458,7 +459,7 @@ footer{
         margin-right: -$middle-space;
     }
 
-    .l-pager, footer {
+    footer {
         padding: $middle-space;
     }
 

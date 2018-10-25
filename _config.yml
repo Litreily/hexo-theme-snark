@@ -1,6 +1,18 @@
 # config
 description: "心之所向，无惧无悔,<br>愿求仁得仁，复无怨怼！"
 
+# comment system
+valine: ## https://valine.js.org
+  enable: true ## If you want to use Valine comment system, please set the value to true.
+  appid: 1ecKy4yk4u1R7C4tScKbnyq9-gzGzoHsz ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+  appkey: uvA3xgqNW3q8TGR483lxXcpB ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
+  notify: false ## Mail notifier, see https://github.com/xCss/Valine/wiki/Valine-评论系统中的邮件提醒设置
+  verify: false ## Validation code.
+  placeholder: "ヾﾉ≧∀≦)o Come on, say something..." ## Comment box placeholders.
+  avatar: 'identicon' ## Gravatar type, see https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
+  pageSize: 10 ## Number of comments per page.
+  guest_info: nick,mail,link ## Attributes of reviewers.
+
 menu:
     #- page: home
     #directory: .
