@@ -1,23 +1,38 @@
 if theme.valine.enable == true
-    #vcomment
-    script(src='//cdn1.lncld.net/static/js/3.0.4/av-min.js')
-    script(src='//unpkg.com/valine@latest/dist/Valine.min.js')
-    script.
-      var notify = '#{ theme.valine.notify }' == true ? true : false;
-      var verify = '#{ theme.valine.verify }' == true ? true : false;
-      var GUEST_INFO = ['nick','mail','link'];
-      var guest_info = '#{ theme.valine.guest_info }'.split(',').filter(function(item){
-        return GUEST_INFO.indexOf(item) > -1
-      });
-      guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
-      window.valine = new Valine({
-        el:'#vcomment',
-        notify:notify,
-        verify:verify,
-        appId:'#{theme.valine.appid}',
-        appKey:'#{theme.valine.appkey}',
-        placeholder:'#{theme.valine.placeholder}',
-        avatar:'#{theme.valine.avatar}',
-        guest_info:guest_info,
-        pageSize:'#{theme.valine.pageSize}'
-      })
+    #valine-comment
+        style(type='text/css').
+            .v * { color: #CECECE; }
+            .v a { color: #0F9FB4; }
+            .v a:hover { color: #216C73; }
+            .v li { list-style: inherit; }
+            .v .vwrap { border: 1px solid #223441; border-radius: 0; }
+            .v .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+            .v .vbtn { border-radius: 0; color: #cecece; background: none; }
+            .v .vlist .vcard .vh { border-bottom-color: #293D4E; }
+            .v .vwrap .vheader .vinput { border-bottom-color: #223441; }
+            .v .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+            .v code, .v pre,.v .vlist .vcard .vhead .vsys { background: #203240; }
+            .v .vlist .vcard .vcontent.expand:before { background: linear-gradient(180deg,hsla(206,33%,19%,0),hsla(206,33%,19%,.9)); }
+            .v .vlist .vcard .vcontent.expand:after { background: hsla(206,33%,19%,.9); }
+        #vcomment
+        script(src='//cdn1.lncld.net/static/js/3.0.4/av-min.js')
+        script(src='//unpkg.com/valine@latest/dist/Valine.min.js')
+        script.
+          var notify = '#{ theme.valine.notify }' == true ? true : false;
+          var verify = '#{ theme.valine.verify }' == true ? true : false;
+          var GUEST_INFO = ['nick','mail','link'];
+          var guest_info = '#{ theme.valine.guest_info }'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+          window.valine = new Valine({
+            el:'#vcomment',
+            notify:notify,
+            verify:verify,
+            appId:'#{theme.valine.appid}',
+            appKey:'#{theme.valine.appkey}',
+            placeholder:'#{theme.valine.placeholder}',
+            avatar:'#{theme.valine.avatar}',
+            guest_info:guest_info,
+            pageSize:'#{theme.valine.pageSize}'
+          })

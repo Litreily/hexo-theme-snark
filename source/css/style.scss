@@ -49,11 +49,11 @@ body, .l-content, blockquote {
 }
 
 
-body,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a,.p-content,.l-post .p-desc a {
+body,button,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a,.p-content,.l-post .p-desc a {
     color: $light;
 }
 
-textarea,input,select {
+button, textarea,input,select {
     font-family: $font-family;
     font-size: 12px;
     outline: 0;
@@ -461,9 +461,6 @@ footer{
 
     footer {
         padding: $middle-space;
-    }
-
-    footer {
         text-align: center;
     }
 }
