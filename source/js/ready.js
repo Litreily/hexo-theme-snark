@@ -10,6 +10,10 @@ $(document).ready(function() {
     prettyPrint();
 
     $(".navbar-icon").click(function() {
+        if((!$(".navbar-icon").hasClass("icon-click")) && (!$(".navbar-icon").hasClass("icon-out")))
+            $(".navbar-icon").toggleClass("icon-click");
+        else
+            $(".navbar-icon").toggleClass("icon-click icon-out");
         $("#menu").toggleClass("h-wrapper mobile-menu");
         $("#container").toggleClass("translate");
     });
