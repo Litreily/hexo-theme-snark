@@ -15,6 +15,7 @@ body {
     background-position-x: $head-width - 400px;
     word-wrap: break-word;
     font: 12px/200% $font-family;
+    overflow-x: hidden;
 }
 
 body, .l-content, blockquote {
@@ -105,6 +106,14 @@ h4{
     content: '.';
 }
 
+#container, #menu {
+    transition: all ease-out 1s;
+}
+
+.translate {
+    transform: translateX($mobile-menu-width);
+}
+
 /*----------------------*/
 /*mobile head nav style */
 /*----------------------*/
@@ -147,6 +156,15 @@ h4{
     }
 }
 
+.mobile-menu {
+    position: fixed;
+    top: $mobile-head-height;
+    background: $purple;
+    box-shadow: 1px 0px 10px 1px $dark-purple;
+    height: 100%;
+    width: $mobile-menu-width;
+    z-index: 99;
+}
 
 /*----------------------*/
 /*head info of home page*/
@@ -446,7 +464,7 @@ footer{
     }
 
     .h-wrapper {
-        display:none;
+        display: none;
     }
 
     .l-wrapper {

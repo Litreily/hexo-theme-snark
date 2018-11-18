@@ -5,13 +5,13 @@ html(lang='en')
         link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
         script(type='text/javascript', src=url_for(theme.js) + '/ready.js', async)
 
-    body: #container.box
+    body
         #mobile-head.mobile-head
             include _partial/mobile-head-nav.pug
-        .h-wrapper
+        #menu.h-wrapper
             include _partial/nav-menu.pug
-        .l-wrapper
-            .l-content.box
+        #container.box
+            .l-wrapper: .l-content.box
                 block content
 
                 include _partial/footer.pug

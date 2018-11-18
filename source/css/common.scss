@@ -24,6 +24,7 @@ $middle-screen-width: 800px;
 $min-screen-width: 500px;
 $mobile-head-height: 48px;
 $mobile-navbar-height: $mobile-head-height;
+$mobile-menu-width: 250px;
 
 // box-sizing
 @mixin box-sizing($box:border-box) {
