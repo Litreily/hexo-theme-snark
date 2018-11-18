@@ -6,6 +6,8 @@ html(lang='en')
         script(type='text/javascript', src=url_for(theme.js) + '/ready.js', async)
 
     body: #container.box
+        #mobile-head.mobile-head
+            include _partial/mobile-head-nav.pug
         .h-wrapper
             include _partial/nav-menu.pug
         .l-wrapper

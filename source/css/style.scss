@@ -1,35 +1,5 @@
+@import './common.scss';
 /* parameters definition */
-// font
-$font-base : 15px;
-$font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
-
-// color
-$purple: #2d4356;
-$dark-purple: #152029;
-$light: #CECECE;
-$blue: #0F9FB4;
-$dark-blue: #7166F7;
-$gray1: #333;
-$gray2: #666;
-$gray3: #999;
-$gray4: #CCC;
-
-
-// width
-$head-width: 360px;
-$art-width: 840px;
-$art-padding: 40px;
-$art-left-offset: -($art-padding * 2);
-$info-width: $art-width - $art-padding;
-$middle-screen-width: 900px;
-$min-screen-width: 500px;
-
-// box-sizing
-@mixin box-sizing($box:border-box) {
-    box-sizing: $box;
-    -moz-box-sizing: $box;
-    -webkit-box-sizing: $box;
-}
 
 /*----------------------*/
 /*basic style of web    */
@@ -40,6 +10,9 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
 }
 
 body {
+    background-image: url(/img/backgroud.png);
+    background-repeat: repeat-y;
+    background-position-x: $head-width - 400px;
     word-wrap: break-word;
     font: 12px/200% $font-family;
 }
@@ -131,6 +104,50 @@ h4{
     overflow: hidden;
     content: '.';
 }
+
+/*----------------------*/
+/*mobile head nav style */
+/*----------------------*/
+.mobile-head {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: $mobile-head-height;
+    background: $purple;
+    box-shadow: 0 0 10px 1px $dark-purple;
+    text-align: center;
+    z-index: 999;
+
+    .navbar-title {
+        display: inline-block;
+        margin-right: $mobile-head-height/2;
+        a {
+            font-size: 1.6em;
+            letter-spacing: 0.2rem;
+            color: $light;
+            line-height: $mobile-head-height;
+        }
+    }
+
+    .navbar-icon {
+        color: $light;
+        height: $mobile-navbar-height;
+        width: $mobile-navbar-height;
+        font-size: 24px;
+        text-align: center;
+        float: left;
+        position: relative;
+        transition: background 0.5s;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include mobile-navbar-icon()
+    }
+}
+
+
 /*----------------------*/
 /*head info of home page*/
 /*----------------------*/
@@ -227,15 +244,17 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 .l-wrapper {
     float: right;
     width: 100%;
+    margin-left: -#{$head-width};
 }
 
 .l-content {
     padding-top: 45px;
+    padding-left: $head-width;
     background-clip: content-box;
 }
 
 .l-post {
-    padding: 0 $art-padding 60px;
+    padding: 0 $art-padding 64px;
     width: 100%;
     @include box-sizing(border-box);
 }
@@ -247,6 +266,8 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 .l-post .p-desc, article.p-art {
     position: relative;
     top: 0;
+    left: $art-left-offset;
+    width: 100%;
     max-width: $art-width;
     text-align: left;
     padding: $art-padding;
@@ -413,32 +434,27 @@ footer{
 /*----------------------*/
 /*Screen adaptation     */
 /*----------------------*/
-@media print, screen and (min-width:$middle-screen-width + 1){
-    body {
-        background-image: url(/img/backgroud.png);
-        background-repeat: repeat-y;
-        background-position-x: $head-width - 400px;
-    }
-
-    .l-wrapper {
-        margin-left: -#{$head-width};
-    }
-
-    .l-content{
-        padding-left: $head-width;
-    }
-
-    .l-post .p-desc, article.p-art {
-        left: $art-left-offset;
-        width: 100%;
-    }
-}
-
 @media print, screen and (max-width:$middle-screen-width){
     $middle-space: 20px;    
+    
+    body{
+        background: $purple;
+    }
+
+    .mobile-head {
+        display: block;
+    }
 
     .h-wrapper {
         display:none;
+    }
+
+    .l-wrapper {
+        margin: 0;
+    }
+
+    .l-content{
+        padding: 64px 0 0;
     }
 
     .l-post,.p-ext {
@@ -452,6 +468,8 @@ footer{
 
     .l-post .p-desc, article.p-art {
         padding: 2em $middle-space;
+        left: 0;
+        width: auto;
     }
 
     blockquote {

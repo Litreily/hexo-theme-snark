@@ -1,0 +1,115 @@
+// font
+$font-base : 15px;
+$font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+
+// color
+$purple: #2d4356;
+$dark-purple: #152029;
+$light: #CECECE;
+$blue: #0F9FB4;
+$dark-blue: #7166F7;
+$gray1: #333;
+$gray2: #666;
+$gray3: #999;
+$gray4: #CCC;
+
+
+// width or height
+$head-width: 320px;
+$art-width: 840px;
+$art-padding: 40px;
+$art-left-offset: -($art-padding * 2);
+$info-width: $art-width - $art-padding;
+$middle-screen-width: 800px;
+$min-screen-width: 500px;
+$mobile-head-height: 48px;
+$mobile-navbar-height: $mobile-head-height;
+
+// box-sizing
+@mixin box-sizing($box:border-box) {
+    box-sizing: $box;
+    -moz-box-sizing: $box;
+    -webkit-box-sizing: $box;
+}
+
+@mixin mobile-navbar-icon() {
+    @keyframes clickfirst {
+        0% { transform: translateY(6px) rotate(0deg); }
+        100% { transform: translateY(0) rotate(45deg); }
+    }
+    @keyframes clickmid {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    @keyframes clicklast {
+        0% { transform: translateY(-6px) rotate(0deg); }
+        100% { transform: translateY(0) rotate(-45deg); }
+    }
+    @keyframes outfirst {
+        0% { transform: translateY(0) rotate(-45deg); }
+        100% { transform: translateY(-6px) rotate(0deg); }
+    }
+    @keyframes outmid {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @keyframes outlast {
+        0% { transform: translateY(0) rotate(45deg); }
+        100% { transform: translateY(6px) rotate(0deg); }
+    }
+
+    span {
+            position: absolute;
+            /* fallback for browsers which still doesn't support for `calc()` */
+            left: 14px;
+            top: 24px;
+            left: calc((100% - 20px) / 2);
+            top: calc((100% - 1px) / 2);
+            width: 20px;
+            height: 1px;
+            background: $light;
+
+            &:nth-child(1) {
+              transform: translateY(6px) rotate(0deg);
+            }
+            &:nth-child(3) {
+              transform: translateY(-6px) rotate(0deg);
+            }
+    }
+
+    &.icon-click {
+        span:nth-child(1) {
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-name: clickfirst;
+        }
+        span:nth-child(2) {
+            animation-duration: 0.2s;
+            animation-fill-mode: both;
+            animation-name: clickmid;
+        }
+        span:nth-child(3) {
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-name: clicklast;
+        }
+    }
+
+    &.icon-out {
+        span:nth-child(1) {
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-name: outfirst;
+        }
+        span:nth-child(2) {
+            animation-duration: 0.2s;
+            animation-fill-mode: both;
+            animation-name: outmid;
+        }
+        span:nth-child(3) {
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-name: outlast;
+        }
+    }
+}
