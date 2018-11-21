@@ -17,4 +17,13 @@ $(document).ready(function() {
         $("#menu").toggleClass("h-wrapper mobile-menu");
         $("#container").toggleClass("translate");
     });
+
+    $("#container").click(function() {
+        if($(".navbar-icon").hasClass("icon-click")) {
+            $(".navbar-icon").toggleClass("icon-click icon-out");
+            $("#menu").toggleClass("h-wrapper mobile-menu");
+            $("#container").toggleClass("translate");
+        }
+    });
+
 });
