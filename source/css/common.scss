@@ -26,6 +26,9 @@ $mobile-head-height: 48px;
 $mobile-navbar-height: $mobile-head-height;
 $mobile-menu-width: 250px;
 
+// animation duration
+$mobile-animation-duration: 0.5s;
+
 // box-sizing
 @mixin box-sizing($box:border-box) {
     box-sizing: $box;
@@ -112,5 +115,21 @@ $mobile-menu-width: 250px;
             animation-fill-mode: both;
             animation-name: outlast;
         }
+    }
+}
+
+@mixin mobile-menu-show() {
+    // Not found the way to show the leave animation of menu yet
+    @keyframes showmenu {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @keyframes hiddenmenu {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    &.mobile-menu {
+        animation: $mobile-animation-duration ease-out showmenu;
     }
 }
