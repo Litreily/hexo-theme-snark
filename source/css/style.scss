@@ -423,7 +423,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 
 .p-content ul>li,.p-content ol>li,.p-archive li{
     list-style: inherit;
-    margin-left: 36px;
+    margin-left: 16px;
 }
 
 .p-content a:hover,.p-archive a:hover {
@@ -446,6 +446,9 @@ footer{
 /*----------------------*/
 .p-archive {
     font-size: 14px;
+}
+
+.p-archive, h1.label-title {
     padding: 0 $art-padding;
 }
 
