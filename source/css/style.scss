@@ -383,7 +383,11 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
             overflow: auto;
         }
         ol li {
-            margin-left: 36px;
+            // enable line number of pre code
+            // list-style: inherit;
+            // margin-left: 36px;
+            list-style: none;
+            margin-left: 0;
             white-space: pre;
         }
     }
