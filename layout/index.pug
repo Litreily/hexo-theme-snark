@@ -5,7 +5,7 @@ block title
 
 block content
     .l-postlist
-        for post in page.posts.toArray()
+        each post in page.posts.toArray()
             .l-post
                 include _partial/common.pug
                 .p-desc.box
@@ -42,15 +42,27 @@ block content
                         a(href=url_for(post.path))= __('阅读更多 >>')
 
                 .p-info.box
-                    span.p-meta= post.date.format(config.date_format)
-                    span= ' [ '
-                    span.p-category
-                        for category in post.categories.toArray()
-                            a(href=url_for(category.path))= category.name
-                    span= ' ] < '
-                    span.p-tags
-                        for tag in post.tags.toArray()
-                            a(href=url_for(tag.path))= '#' + tag.name + ' '
-                    span= '>'
+                    span.p-meta
+                        i(class='fa font-awesome '+ theme.icons.date)
+                        a(href=url_for(post.path))= post.date.format(config.date_format)
+
+                    - var numOfCategories = post.categories.length
+                    if numOfCategories
+                        span.p-category
+                            i(class='fa font-awesome '+ theme.icons.category)
+                            each category, index in post.categories.toArray()
+                                a(href=url_for(category.path))= category.name
+                                if index < numOfCategories - 1
+                                    | &nbsp;&bull;&nbsp;
+                                
+                    if post.tags.length
+                        span.p-tags
+                            if post.tags.length == 1
+                                i(class='fa font-awesome '+ theme.icons.tag)
+                            else
+                                i(class='fa font-awesome '+ theme.icons.tags)
+
+                            each tag in post.tags.toArray()
+                                a(href=url_for(tag.path))= tag.name
 
     include _partial/paginator.pug

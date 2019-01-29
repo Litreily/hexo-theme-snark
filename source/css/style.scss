@@ -114,6 +114,10 @@ h4{
     transform: translateX($mobile-menu-width);
 }
 
+i.font-awesome {
+    font-size: 1.2em;
+    margin-right: 0.2em;
+}
 /*----------------------*/
 /*mobile head nav style */
 /*----------------------*/
@@ -444,6 +448,15 @@ footer{
 
 .p-info span,.p-info a, footer p, footer a{
     color: #999
+}
+
+.p-info span{
+    margin-right: 2em
+}
+
+.p-info span.p-tags a {
+    margin-right: 0.5em;
+    display: inline-flex;
 }
 
 /*----------------------*/

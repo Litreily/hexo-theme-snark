@@ -1,4 +1,4 @@
-# snark-hexo
+# hexo-theme-snark
 An hexo theme with lofter style
 
 ## Installation

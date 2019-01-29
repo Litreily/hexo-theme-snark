@@ -14,27 +14,20 @@ valine: ## https://valine.js.org
   guest_info: nick,mail,link ## Attributes of reviewers.
 
 menu:
-    #- page: home
-    #directory: .
-    #icon: fa-home
   - page: 归档
     directory: archives/
-    #icon: fa-archive
   - page: 标签
     directory: tags/
-    #icon: fa-archive
   - page: 笔记
     directory: https://litreily.gitbooks.io/notes/
-    #icon: fa-book
   - page: 关于
     directory: about/
-    #icon: fa-user
-  #- page: history
-    #directory: history/
-    #icon: fa-history
-  #- page: rss
-    #directory: atom.xml
-    #icon: fa-rss
+
+icons:
+  date: fa-calendar
+  category: fa-folder-o
+  tag: fa-tag
+  tags: fa-tags
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   #- search
