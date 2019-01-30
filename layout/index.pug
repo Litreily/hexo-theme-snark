@@ -43,13 +43,13 @@ block content
 
                 .p-info.box
                     span.p-meta
-                        i(class='fa font-awesome '+ theme.icons.date)
+                        i(class=theme.icons.date)
                         a(href=url_for(post.path))= post.date.format(config.date_format)
 
                     - var numOfCategories = post.categories.length
                     if numOfCategories
                         span.p-category
-                            i(class='fa font-awesome '+ theme.icons.category)
+                            i(class=theme.icons.category)
                             each category, index in post.categories.toArray()
                                 a(href=url_for(category.path))= category.name
                                 if index < numOfCategories - 1
@@ -58,9 +58,9 @@ block content
                     if post.tags.length
                         span.p-tags
                             if post.tags.length == 1
-                                i(class='fa font-awesome '+ theme.icons.tag)
+                                i(class=theme.icons.tag)
                             else
-                                i(class='fa font-awesome '+ theme.icons.tags)
+                                i(class=theme.icons.tags)
 
                             each tag in post.tags.toArray()
                                 a(href=url_for(tag.path))= tag.name

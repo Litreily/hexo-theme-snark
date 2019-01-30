@@ -24,10 +24,10 @@ menu:
     directory: about/
 
 icons:
-  date: fa-calendar
-  category: fa-folder-o
-  tag: fa-tag
-  tags: fa-tags
+  date: fa fa-calendar
+  category: fa fa-folder-o
+  tag: fa fa-tag
+  tags: fa fa-tags
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   #- search
