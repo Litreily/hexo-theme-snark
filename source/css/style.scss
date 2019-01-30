@@ -118,6 +118,18 @@ i.fa {
     font-size: 1.2em;
     margin-right: 0.2em;
 }
+
+ul.search-result-list {
+    a{
+        color: #649cd9;
+    }
+    em {
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+    }
+}
+
 /*----------------------*/
 /*mobile head nav style */
 /*----------------------*/
@@ -514,6 +526,10 @@ footer{
         padding: 2em $middle-space;
         left: 0;
         width: auto;
+    }
+
+    ul.search-result-list {
+        padding: 0 10%;
     }
 
     blockquote {

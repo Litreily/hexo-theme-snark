@@ -1,4 +1,5 @@
 # hexo-theme-snark
+
 An hexo theme with lofter style
 
 ## Installation
@@ -18,3 +19,11 @@ highlight:
   auto_detect: false
   tab_replace:
 ```
+
+### Optional
+
+You may need install some hexo plugins as below
+
+- `npm install hexo-generator-feed --save` for RSS
+- `npm install hexo-generator-search --save` for local search
+- `npm install hexo-generator-sitemap --save` for sitemap

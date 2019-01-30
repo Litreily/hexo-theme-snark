@@ -13,15 +13,22 @@ valine: ## https://valine.js.org
   pageSize: 10 ## Number of comments per page.
   guest_info: nick,mail,link ## Attributes of reviewers.
 
+
+local_search: true
+
 menu:
   - page: 归档
     directory: archives/
+  - page: 分类
+    directory: categories/
   - page: 标签
     directory: tags/
-  - page: 笔记
-    directory: https://litreily.gitbooks.io/notes/
+  # - page: 笔记
+  #   directory: https://litreily.gitbooks.io/notes/
   - page: 关于
     directory: about/
+  - page: rss
+    directory: atom.xml
 
 icons:
   date: fa fa-calendar

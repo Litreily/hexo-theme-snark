@@ -1,0 +1,11 @@
+script(type='text/javascript', src=url_for(theme.plugins) + '/prettify/prettify.js')
+script(type='text/javascript', src=url_for(theme.js) + '/search.js')
+
+if theme.local_search == true
+    script.
+        var search_path = '#{config.search.path}';
+        if (search_path.length == 0) {
+            search_path = 'search.xml';
+        }
+        var path = '#{config.root}' + search_path;
+        searchFunc(path, 'local-search-input', 'local-search-result');
