@@ -4,14 +4,14 @@ block title
     title= __(page.title) + ' | ' + config.title
 
 block content
-    case page.title
-        when 'categories'
-            include categories.pug
-        when 'tags'
-            include tags.pug
-    
     section(class='p-'+ page.title + ' p-ext p-common')
         h1.page-title= __(page.title)
+        case page.title
+            when 'categories'
+                include categories.pug
+            when 'tags'
+                include tags.pug
+
         .page-content
             != page.content
 

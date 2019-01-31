@@ -442,7 +442,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 
 }
 
-.p-content ul>li,.p-content ol>li,.p-archive li{
+.p-content ul>li,.p-content ol>li,.p-archive li {
     list-style: inherit;
     margin-left: 16px;
 }
@@ -472,7 +472,8 @@ footer{
 }
 
 /*----------------------*/
-/*style of archive      */
+/*style of archive, tag */
+/* ,categories, aoout   */
 /*----------------------*/
 .p-common {
     font-size: 14px;
@@ -483,6 +484,31 @@ footer{
 
 .list {
     margin: 1em 0;
+}
+
+.page-content p {
+    margin: 14px 0;
+}
+
+.category-list-item .category-list-count {
+    color: aqua;
+    align-self: baseline;
+}
+
+.tagcloud a, .category-list-item a{
+    margin: 4px 10px 4px 0;
+    display: inline-table;
+    padding: 10px 20px;
+    background: #1f3041;
+    border-radius: 6%;
+    color: cadetblue;
+    font-size: 1.2em;
+    &:hover {
+        color: white;
+        box-shadow: 0 0 10px 2px $dark-purple;
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+    }
 }
 
 /*----------------------*/
