@@ -10,3 +10,39 @@ mixin title(page)
             = page.title
         else
             = _p('no title')
+
+mixin post-date(post)
+    span.p-date
+        i(class=theme.icons.date)
+        a(href=url_for(post.path))= post.date.format(config.date_format)
+
+mixin post-categories(post)
+    - var numOfCategories = post.categories.length
+    if numOfCategories
+        span.p-category
+            i(class=theme.icons.category)
+            each category, index in post.categories.toArray()
+                a(href=url_for(category.path))= category.name
+                if index < numOfCategories - 1
+                    | &nbsp;&bull;&nbsp;
+
+mixin post-tags(post)
+    if post.tags.length
+        span.p-tags
+            if post.tags.length == 1
+                i(class=theme.icons.tag)
+            else
+                i(class=theme.icons.tags)
+
+            each tag in post.tags.toArray()
+                a(href=url_for(tag.path))= tag.name
+
+mixin post-meta(post)
+    .p-info.box
+        +post-date(post)
+        +post-categories(post)
+        +post-tags(post)
+
+mixin post-footer(post)
+    .p-info.box
+        +post-tags(post)

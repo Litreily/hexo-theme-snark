@@ -27,3 +27,5 @@ You may need install some hexo plugins as below
 - `npm install hexo-generator-feed --save` for RSS
 - `npm install hexo-generator-search --save` for local search
 - `npm install hexo-generator-sitemap --save` for sitemap
+
+You can add your customized css to `source/css/customize.scss`, then it will be load to `head` of blog

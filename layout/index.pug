@@ -4,10 +4,10 @@ block title
     title= config.title
 
 block content
+    include _partial/common.pug
     .l-postlist
         each post in page.posts.toArray()
             .l-post
-                include _partial/common.pug
                 .p-desc.box
                     .p-pic
                     //- title
@@ -41,28 +41,5 @@ block content
                     p(class='p-readmore')
                         a(href=url_for(post.path))= __('阅读更多 >>')
 
-                .p-info.box
-                    span.p-meta
-                        i(class=theme.icons.date)
-                        a(href=url_for(post.path))= post.date.format(config.date_format)
-
-                    - var numOfCategories = post.categories.length
-                    if numOfCategories
-                        span.p-category
-                            i(class=theme.icons.category)
-                            each category, index in post.categories.toArray()
-                                a(href=url_for(category.path))= category.name
-                                if index < numOfCategories - 1
-                                    | &nbsp;&bull;&nbsp;
-                                
-                    if post.tags.length
-                        span.p-tags
-                            if post.tags.length == 1
-                                i(class=theme.icons.tag)
-                            else
-                                i(class=theme.icons.tags)
-
-                            each tag in post.tags.toArray()
-                                a(href=url_for(tag.path))= tag.name
-
+                +post-meta(post)
     include _partial/paginator.pug

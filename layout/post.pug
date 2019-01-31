@@ -4,13 +4,15 @@ block title
     title= page.title + ' | ' + config.title
 
 block content
+    include _partial/common.pug
     .l-post.l-post-art
         article.p-art
             h1.p-title= page.title
             .p-content
                 != page.content
+        +post-footer(page)
+
     section.p-ext
         include _partial/post-jump.pug
-
         if page.comments
           include _partial/comments.pug
