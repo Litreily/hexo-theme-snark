@@ -474,18 +474,16 @@ footer{
 /*----------------------*/
 /*style of archive      */
 /*----------------------*/
-.p-archive {
+.p-common {
     font-size: 14px;
-}
-
-.p-archive, h1.label-title {
-    padding: 0 $art-padding;
+    h2, #valine-comment{
+        margin-top:24px;
+    }
 }
 
 .list {
     margin: 1em 0;
 }
-
 
 /*----------------------*/
 /*Screen adaptation     */

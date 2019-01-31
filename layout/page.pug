@@ -1,1 +1,19 @@
 extends base
+
+block title
+    title= __(page.title) + ' | ' + config.title
+
+block content
+    case page.title
+        when 'categories'
+            include categories.pug
+        when 'tags'
+            include tags.pug
+    
+    section(class='p-'+ page.title + ' p-ext p-common')
+        h1.page-title= __(page.title)
+        .page-content
+            != page.content
+
+        if page.comments == true
+            include _partial/comments.pug

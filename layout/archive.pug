@@ -9,9 +9,12 @@ block title
         title= __('archive') + ' | ' + config.title
 
 block content
-    if page.category || page.tag
-        h1.label-title=  __(page.category || page.tag)
-    .p-archive
+    section.p-archive.p-ext.p-common
+        if page.category || page.tag
+            h1.page-title=  __(page.category || page.tag)
+        else
+            h1.page-title= __('archive')
+
         //Use lodash to classify posts. See https://lodash.com/docs#groupBy
         each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
             h2= -year
