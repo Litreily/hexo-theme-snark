@@ -77,7 +77,7 @@ blockquote {
 h1{
     font-size: 25px;
     line-height: 1.2;
-    margin: 0 0 1em;
+    margin: 0 0 36px;
 }
 
 h2{
@@ -371,6 +371,13 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 /*----------------------*/
 /*style of post content */
 /*----------------------*/
+.p-header {
+    margin-bottom: 3em;
+    h1 {
+        margin-bottom: 0.2em;
+    }
+}
+
 .p-content {
     h2,h3,h4 {
         margin: 1.6em 0 0.6em;
@@ -490,17 +497,13 @@ footer{
     margin: 14px 0;
 }
 
-.category-list-item .category-list-count {
-    color: aqua;
-    align-self: baseline;
-}
-
 .tagcloud a, .category-list-item a{
-    margin: 4px 10px 4px 0;
+    margin: 4px 6px 4px 0;
     display: inline-table;
     padding: 10px 20px;
     background: #1f3041;
     border-radius: 6%;
+    vertical-align: middle;
     color: cadetblue;
     font-size: 1.2em;
     &:hover {
@@ -510,6 +513,17 @@ footer{
         -webkit-transform: scale(1.1);
     }
 }
+
+.category-list-item .category-list-count {
+    color: aqua;
+    align-self: baseline;
+}
+
+.category-list-child li {
+    list-style: inherit;
+    margin-left: 2em;
+}
+
 
 /*----------------------*/
 /*Screen adaptation     */

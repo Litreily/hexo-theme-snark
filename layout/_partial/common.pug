@@ -43,6 +43,13 @@ mixin post-meta(post)
         +post-categories(post)
         +post-tags(post)
 
+mixin post-header(post)
+    .p-header
+        h1.p-title= post.title
+        .p-info.box
+            +post-date(post)
+            +post-categories(post)
+
 mixin post-footer(post)
     .p-info.box
         +post-tags(post)

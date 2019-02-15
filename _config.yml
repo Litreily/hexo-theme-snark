@@ -16,6 +16,7 @@ valine: ## https://valine.js.org
 
 local_search: true
 customize_css: true  ## if enable customize_css, it will load file source/css/customize.scss
+fancybox: false  ## for image view
 
 menu:
   - page: 归档
@@ -33,7 +34,7 @@ menu:
 
 icons:
   date: fa fa-calendar
-  category: fa fa-folder-o
+  category: fa fa-folder
   tag: fa fa-tag
   tags: fa fa-tags
 

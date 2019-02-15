@@ -7,7 +7,7 @@ block content
     include _partial/common.pug
     .l-post.l-post-art
         article.p-art
-            h1.p-title= page.title
+            +post-header(page)
             .p-content
                 != page.content
         +post-footer(page)
