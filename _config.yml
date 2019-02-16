@@ -3,9 +3,9 @@ description: "心之所向，无惧无悔,<br>愿求仁得仁，复无怨怼！"
 
 # comment system
 valine: ## https://valine.js.org
-  enable: true ## If you want to use Valine comment system, please set the value to true.
-  appid: 1ecKy4yk4u1R7C4tScKbnyq9-gzGzoHsz ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
-  appkey: uvA3xgqNW3q8TGR483lxXcpB ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
+  enable: false ## If you want to use Valine comment system, please set the value to true.
+  appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+  appkey: ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
   notify: false ## Mail notifier, see https://github.com/xCss/Valine/wiki/Valine-评论系统中的邮件提醒设置
   verify: false ## Validation code.
   placeholder: "ヾﾉ≧∀≦)o Come on, say something..." ## Comment box placeholders.
@@ -16,7 +16,7 @@ valine: ## https://valine.js.org
 
 local_search: true
 customize_css: true  ## if enable customize_css, it will load file source/css/customize.scss
-fancybox: false  ## for image view
+fancybox: true  ## for image view
 
 menu:
   - page: 归档
@@ -25,8 +25,6 @@ menu:
     directory: categories/
   - page: 标签
     directory: tags/
-  # - page: 笔记
-  #   directory: https://litreily.gitbooks.io/notes/
   - page: 关于
     directory: about/
   - page: rss
@@ -47,20 +45,8 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   #- links
 
 links:
-  - title: smslit-水木十里
-    url: https://www.smslit.top
-
-#timeline:
-    #- num: 1
-    #word: 2016/04/04 - 开始我的博客之路
-    #- num: 2
-    #word: 2016/12/12 - 更新主题至 primer，使用多说评论
-    #- num: 3
-    #word: 2017/03/23 - 因多说将要停止更新，改用Disqus
-    #- num: 4
-    #word: 2017/04/29 - 更新主题至 manupassant
-    #- num: 5
-    #word: 2017/07/20 - 大道至简，去除博客的Disqus评论功能，百度统计功能及不蒜子流量统计功能
+  - title: friend-1
+    url: https://www.friend-1.com
 
 # Static files
 js: js

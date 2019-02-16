@@ -9,3 +9,8 @@ if theme.local_search == true
         }
         var path = '#{config.root}' + search_path;
         searchFunc(path, 'local-search-input', 'local-search-result');
+
+if theme.fancybox == true
+    script(type='text/javascript', src='//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js', async)
+    script(type='text/javascript', src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
+    link(rel='stylesheet', type='text/css', href='//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css')

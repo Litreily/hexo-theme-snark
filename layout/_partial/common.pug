@@ -44,9 +44,9 @@ mixin post-meta(post)
         +post-tags(post)
 
 mixin post-header(post)
-    .p-header
+    .p-header.box
         h1.p-title= post.title
-        .p-info.box
+        .p-info
             +post-date(post)
             +post-categories(post)
 

@@ -229,7 +229,10 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     vertical-align: middle;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    border-radius: 50%
+    border-radius: 50%;
+    &:hover{
+        opacity: 0.6;
+    }
 }
 
 .m-hdimg img,.m-hdimg .ttl,.m-desc {
@@ -493,10 +496,6 @@ footer{
     margin: 1em 0;
 }
 
-.page-content p {
-    margin: 14px 0;
-}
-
 .tagcloud a, .category-list-item a{
     margin: 4px 6px 4px 0;
     display: inline-table;
@@ -556,7 +555,7 @@ footer{
         padding-right: 5%;
     }
 
-    .l-post .p-info {
+    .l-post .p-info.box {
         padding: 0 $middle-space;
     }
 
