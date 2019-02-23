@@ -10,6 +10,7 @@ An hexo theme with lofter style, it's very simple and cool!
   - Archives
   - Categories
   - Tags
+- Copyright Notice
 - Fancybox image viewer
 - Fontawesome v4.7.0 icons
 - Local Search

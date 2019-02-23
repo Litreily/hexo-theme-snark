@@ -10,9 +10,11 @@ block content
             +post-header(page)
             .p-content
                 != page.content
+            if theme.copyright
+                +post-copyright(page)
         +post-footer(page)
 
     section.p-ext
         include _partial/post-jump.pug
         if page.comments
-          include _partial/comments.pug
+            include _partial/comments.pug

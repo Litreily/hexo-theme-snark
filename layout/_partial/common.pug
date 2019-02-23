@@ -50,6 +50,22 @@ mixin post-header(post)
             +post-date(post)
             +post-categories(post)
 
+mixin post-copyright(post)
+    .p-copyright: blockquote
+        .p-copyright-author
+            span.p-copyright-key= '本文作者：'
+            span.p-copytight-value: a(href='mailto:litreily@163.com')= config.author
+        .p-copyright-link
+            span.p-copyright-key= '本文链接：'
+            span.p-copytight-value: a(href=url_for(post.path))= config.url + '/' + post.path
+        .p-copyright-note
+            span.p-copyright-key= '版权声明：'
+            span.p-copytight-value= '本博客所有文章除特殊声明外，均采用'
+                a(rel='nofollow', target='_blank', href='https://creativecommons.org/licenses/by-nc/4.0/')  CC BY-NC 4.0 
+                | 许可协议。转载请注明出处 
+                a(href=config.url)= config.author + '的博客'
+                | ！
+
 mixin post-footer(post)
     .p-info.box
         +post-tags(post)

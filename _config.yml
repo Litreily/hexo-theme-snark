@@ -17,6 +17,7 @@ valine: ## https://valine.js.org
 local_search: true
 customize_css: true  ## if enable customize_css, it will load file source/css/customize.scss
 fancybox: true  ## for image view
+copyright: true ## for CC BY-NC 4.0 license
 
 menu:
   - page: 归档

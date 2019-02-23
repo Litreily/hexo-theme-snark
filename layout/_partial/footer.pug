@@ -1,6 +1,8 @@
 footer: p= 'Copyright © ' + date(Date.now(), 'YYYY') + ' '
-  a(href=url_for('.'), rel='nofollow')= config.title + ' | '
-  | Powered by
+  a(href=url_for('.'), rel='nofollow')= config.title + ' · '
+  if theme.copyright
+    strong: a(rel='nofollow', target='_blank', href='https://creativecommons.org/licenses/by-nc/4.0/') CC BY-NC 4.0
+  |  | Powered by
   a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
   | Theme with
   a(rel='nofollow', target='_blank', href='https://github.com/litreily/snark-hexo')  snark.

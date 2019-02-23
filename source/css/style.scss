@@ -423,6 +423,13 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     pre.prettyprint {
         width: initial;
         max-width: 95%;
+        &:before {
+            content: "code";
+            background: $purple;
+            display: block;
+            margin: -1em -1em 1em;
+            padding: 0 1em;
+        }
     }
 
     pre code {
@@ -457,8 +464,15 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     margin-left: 16px;
 }
 
-.p-content a:hover,.p-archive a:hover {
+.p-content a:hover,.p-archive a:hover,.p-copyright a:hover {
     opacity: 0.6;
+}
+
+.p-copyright{
+    font-size: 14px;
+    .p-copyright-key {
+        color: yellow;
+    }
 }
 
 /*----------------------*/
@@ -590,11 +604,5 @@ footer{
         max-width: initial;
         margin-left: -20px !important;
         margin-right: -20px !important;
-        -moz-border-radius: 0;
-        -webkit-border-radius:0;
-        -o-border-radius: 0;
-        -ms-border-radius: 0;
-        -khtml-border-radius: 0;
-        border-radius:0;
     }
 }
