@@ -12,9 +12,10 @@ html(lang='en')
             include _partial/mobile-head-nav.pug
         #menu.h-wrapper
             include _partial/nav-menu.pug
+        #back2Top
+            a(class='fa fa-arrow-up' title='Back to top' href='#')
         #container.box
             .l-wrapper: .l-content.box
                 block content
-
                 include _partial/footer.pug
         include _partial/after-footer.pug
