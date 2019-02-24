@@ -459,7 +459,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 
 }
 
-.p-content ul>li,.p-content ol>li,.p-archive li {
+.p-content ul>li,.p-content ol>li {
     list-style: inherit;
     margin-left: 16px;
 }
@@ -508,6 +508,61 @@ footer{
 
 .list {
     margin: 1em 0;
+}
+
+.p-archive {
+    h2, ul li {
+        position: relative;
+        margin-left: 24px;
+        vertical-align: middle;
+    }
+    h2:before, h2:after, li:before, li:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background: $dark-blue;
+        opacity: 0.4;
+    }
+    h2:hover:before, li:hover:before {
+        opacity: 1;
+    }
+    h2:before {
+        top: 10px;
+        left: -24px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    h2:after {
+        top: 24px;
+        left: -19px;
+        width: 2px;
+        height: 30px;
+        border-radius: 2px;
+    }
+    li:before {
+        top: 8px;
+        left: -22px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    li:after {
+        top: 18px;
+        left: -19px;
+        width: 2px;
+        height: 52%;
+        height: calc(100% - 12px);
+        border-radius: 2px;
+    }
+    li:last-child:after {
+        height: 36px;
+        height: calc(100% + 14px);
+    }
+    ul:last-child li:last-child:after{
+        content: none;
+        height: 0;
+    }
 }
 
 .tagcloud a, .category-list-item a{
