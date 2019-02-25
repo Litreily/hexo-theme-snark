@@ -49,6 +49,10 @@ mixin post-header(post)
         .p-info
             +post-date(post)
             +post-categories(post)
+            if theme.busuanzi
+                span.p-view#busuanzi_container_page_pv
+                    i(class=theme.icons.view)
+                    span#busuanzi_value_page_pv
 
 mixin post-copyright(post)
     .p-copyright: blockquote

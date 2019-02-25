@@ -14,6 +14,7 @@ valine: ## https://valine.js.org
   guest_info: nick,mail,link ## Attributes of reviewers.
 
 
+busuanzi: true  ## If you want show counter of views, please set the value to true
 local_search: true
 customize_css: true  ## if enable customize_css, it will load file source/css/customize.scss
 fancybox: true  ## for image view
@@ -36,6 +37,8 @@ icons:
   category: fa fa-folder
   tag: fa fa-tag
   tags: fa fa-tags
+  view: fa fa-eye
+  visitor: fa fa-user
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   #- search

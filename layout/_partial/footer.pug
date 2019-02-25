@@ -1,8 +1,19 @@
-footer: p= 'Copyright © ' + date(Date.now(), 'YYYY') + ' '
-  a(href=url_for('.'), rel='nofollow')= config.title + ' · '
+footer: p= 'Copyright © 2016 - ' + date(Date.now(), 'YYYY') + ' '
+  a(href=url_for('.'), rel='nofollow')= config.title
   if theme.copyright
+    |  | 
     strong: a(rel='nofollow', target='_blank', href='https://creativecommons.org/licenses/by-nc/4.0/') CC BY-NC 4.0
-  |  | Powered by
+  br
+  if theme.busuanzi
+    span#busuanzi_container_site_uv
+      i(class=theme.icons.visitor)
+      span#busuanzi_value_site_uv
+    |  
+    span#busuanzi_container_site_pv
+      i(class=theme.icons.view)
+      span#busuanzi_value_site_pv
+    |  | 
+  | Powered by
   a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
   | Theme with
   a(rel='nofollow', target='_blank', href='https://github.com/litreily/snark-hexo')  snark.

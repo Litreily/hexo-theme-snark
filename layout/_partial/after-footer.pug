@@ -2,6 +2,9 @@ script(type='text/javascript', src=url_for(theme.plugins) + '/prettify/prettify.
 script(type='text/javascript', src=url_for(theme.js) + '/search.js')
 script(type='text/javascript', src=url_for(theme.js) + '/top.js')
 
+if theme.busuanzi
+    script(type='text/javascript', src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
+
 if theme.local_search == true
     script.
         var search_path = '#{config.search.path}';
