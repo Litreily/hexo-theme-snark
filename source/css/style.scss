@@ -446,7 +446,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
         vertical-align: middle;
         overflow-x: auto;
 
-        tr:nth-child(2n) {
+        tbody tr:nth-child(2n-1) {
             background: $gray1;
         }
     }
