@@ -1,3 +1,4 @@
 source/css/customize.scss
 CNAME
 *.backup
+node_modules/
