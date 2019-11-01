@@ -6,6 +6,7 @@ valine: ## https://valine.js.org
   enable: false ## If you want to use Valine comment system, please set the value to true.
   appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
   appkey: ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
+  lang: zh-cn ## Language, e.g. zh-cn, en
   notify: false ## Mail notifier, see https://github.com/xCss/Valine/wiki/Valine-评论系统中的邮件提醒设置
   verify: false ## Validation code.
   placeholder: "ヾﾉ≧∀≦)o Come on, say something..." ## Comment box placeholders.
