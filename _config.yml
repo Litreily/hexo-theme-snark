@@ -16,7 +16,7 @@ valine: ## https://valine.js.org
 
 busuanzi: true  ## If you want show counter of views, please set the value to true
 local_search: true
-customize_css: true  ## if enable customize_css, it will load file source/css/customize.scss
+customize_css: false  ## if enable customize_css, it will load file source/css/customize.scss
 fancybox: true  ## for image view
 copyright: true ## for CC BY-NC 4.0 license
 
