@@ -14,6 +14,9 @@ valine: ## https://valine.js.org
   pageSize: 10 ## Number of comments per page.
   guest_info: nick,mail,link ## Attributes of reviewers.
 
+baidu_analytics: ## https://tongji.baidu.com
+    enable: false
+    id: ## Your analytics id, e.g. 213250b3059d3a7c6607d30bea630c32
 
 busuanzi: true  ## If you want show counter of views, please set the value to true
 local_search: true

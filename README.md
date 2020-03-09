@@ -4,6 +4,7 @@ An hexo theme with lofter style, it's very simple and cool!
 
 ## Features
 
+- Baidu Analytics
 - Code Highlight (Use Google Prettify)
 - Comment System (Only Valine as for now)
 - Common pages
