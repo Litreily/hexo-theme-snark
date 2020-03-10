@@ -1,9 +1,9 @@
-if theme.baidu_analytics.enable == true
+if theme.baidu.analytics == true
     script.
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?#{ theme.baidu_analytics.id }";
+            hm.src = "https://hm.baidu.com/hm.js?#{ config.baidu.analytics_id }";
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();

@@ -3,9 +3,11 @@ description: "心之所向，无惧无悔,<br>愿求仁得仁，复无怨怼！"
 
 # comment system
 valine: ## https://valine.js.org
-  enable: false ## If you want to use Valine comment system, please set the value to true.
-  appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+  enable: true ## If you want to use Valine comment system, please set the value to true.
+  appid:  ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+          ## please set it on valine.appid of your blog source _config.yml
   appkey: ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
+          ## please set it on valine.appkey of your blog source _config.yml
   lang: zh-cn ## Language, e.g. zh-cn, en
   notify: false ## Mail notifier, see https://github.com/xCss/Valine/wiki/Valine-评论系统中的邮件提醒设置
   verify: false ## Validation code.
@@ -14,9 +16,13 @@ valine: ## https://valine.js.org
   pageSize: 10 ## Number of comments per page.
   guest_info: nick,mail,link ## Attributes of reviewers.
 
-baidu_analytics: ## https://tongji.baidu.com
-    enable: false
-    id: ## Your analytics id, e.g. 213250b3059d3a7c6607d30bea630c32
+# baidu 
+baidu: ## https://tongji.baidu.com, https://ziyuan.baidu.com
+  analytics: true
+  analytics_id: ## Your baidu tongji related id, e.g. 213250b3059d3a7c6607d30bea630c32
+                ## Please set it on baidu.analytics_id of your blog source _config.yml 
+  verification: ## Your baidu ziyuan verification code
+                ## Please set it on baidu.verification of your blog source _config.yml 
 
 busuanzi: true  ## If you want show counter of views, please set the value to true
 local_search: true
