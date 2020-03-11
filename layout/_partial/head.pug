@@ -5,7 +5,7 @@ head
     meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
     meta(content='telephone=no', name='format-detection')
     meta(name='description', content=config.description)
-    meta(name='baidu-site-verification', content=config.baidu.verification)
+    meta(name='baidu-site-verification', content=theme.baidu.verification || config.baidu.verification)
     block title
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css')
     link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.png'))
