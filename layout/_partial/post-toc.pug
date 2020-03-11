@@ -1,0 +1,4 @@
+if ! page.notoc
+    aside#toc
+        .toc-title= "目录"
+        nav: != toc(page.content)

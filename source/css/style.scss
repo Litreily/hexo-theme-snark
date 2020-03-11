@@ -9,6 +9,10 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(/img/backgroud.png);
     background-repeat: repeat-y;
@@ -494,6 +498,33 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 }
 
 /*----------------------*/
+/*style of toc          */
+/*----------------------*/
+#toc {
+    position: fixed;
+    min-width: 120px;
+    top: 45px;
+    left: 1240px;
+    display: block;
+    padding: 1.5em;
+    background: $dark-purple;
+    border-radius: 4px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+
+    li a {
+        display: block;
+        overflow: auto;
+        &:hover {
+            color: white;
+        }
+    }
+    li li {
+        padding-left: 1.5em;
+    }
+} 
+
+/*----------------------*/
 /*style of ext info     */
 /*----------------------*/
 footer{
@@ -640,6 +671,12 @@ footer{
 /*----------------------*/
 /*Screen adaptation     */
 /*----------------------*/
+@media print, screen and (max-width:$large-screen-width){
+    #toc {
+        display: none;
+    }
+}
+
 @media print, screen and (max-width:$totop-fixed-width){
     #back2Top {
         right: 20px;
