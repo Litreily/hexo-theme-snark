@@ -9,9 +9,9 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+//html {
+    //scroll-behavior: smooth;
+//}
 
 body {
     background-image: url(/img/backgroud.png);
@@ -502,19 +502,21 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 /*----------------------*/
 #toc {
     position: fixed;
-    min-width: 120px;
+    min-width: 150px;
     top: 45px;
-    left: 1240px;
+    left: 1220px;
     display: block;
     padding: 1.5em;
     background: $dark-purple;
     border-radius: 4px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
     margin-right: 20px;
+    max-height: calc(100% - 90px);
+    overflow: auto;
 
     li a {
         display: block;
-        overflow: auto;
         &:hover {
             color: white;
         }
@@ -649,8 +651,8 @@ footer{
     display: none;
     cursor: pointer;
     position: fixed;
-    bottom: 64px;
-    left:  1240px; // $totop-fixed-width - 60px
+    bottom: 45px;
+    left:  1220px; // $totop-fixed-width - 60px
     background-color: rgba(255,255,255,0.1);
     text-align: center;
     font-size: 16px;
