@@ -18,10 +18,10 @@ valine: ## https://valine.js.org
 
 # baidu 
 baidu: ## https://tongji.baidu.com, https://ziyuan.baidu.com
-  analytics: true
+  analytics: false
   analytics_id: ## Your baidu tongji related id, e.g. 213250b3059d3a7c6607d30bea630c32
                 ## [Optional] You can set baidu.analytics_id on your blog source _config.yml
-  verification: ## Your baidu ziyuan verification code
+  verification: "" ## Your baidu ziyuan verification code
                 ## [Optional] You can set baidu.verification on your blog source _config.yml
 
 busuanzi: true  ## If you want show counter of views, please set the value to true
