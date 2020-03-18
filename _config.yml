@@ -16,7 +16,7 @@ valine: ## https://valine.js.org
 
 # baidu 
 baidu: ## https://tongji.baidu.com, https://ziyuan.baidu.com
-  analytics: true
+  analytics: false
   analytics_id: ## Your baidu tongji related id, e.g. 213250b3059d3a7c6607d30bea630c32
   verification: ## Your baidu ziyuan verification code
 
