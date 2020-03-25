@@ -22,10 +22,13 @@ body {
     overflow-x: hidden;
 }
 
-body, .l-content, blockquote {
+body, .l-content {
     background-color: $purple;
 }
 
+blockquote {
+    background-color: $dark-block;
+}
 
 body,button,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a,.p-content,.l-post .p-desc a {
     color: $light;
@@ -351,6 +354,10 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 
 .p-readmore{
     text-align: right;
+    a {
+        padding: 0.6em 1.2em;
+        background: $dark-block;
+    }
 }
 
 /*----------------------*/
@@ -447,7 +454,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
         max-width: 95%;
         &:before {
             content: "code";
-            background: $purple;
+            background: $bold-purple;
             display: block;
             margin: -1em -1em 1em;
             padding: 0 1em;
@@ -462,14 +469,21 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     table {
         display: inline-block;
         max-width: 100%;
-        border: 1px solid $gray1;
+        border: 1px solid $dark-block;
         border-collapse: separate;
         border-spacing: 0;
         vertical-align: middle;
         overflow-x: auto;
 
-        tbody tr:nth-child(2n-1) {
-            background: $gray1;
+        thead {
+            background: $dark-block;
+        }
+        tbody tr {
+            color: #bbaacc;
+        }
+        tbody tr:nth-child(2n) {
+            background: #1f3140;
+            background: rgba(0,0,0,0.15);
         }
     }
     th, td {
@@ -481,9 +495,13 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
 
 }
 
-.p-content ul>li,.p-content ol>li {
-    list-style: inherit;
-    margin-left: 16px;
+.p-content > ul,.p-content > ol {
+    margin-left: 1.2em;
+    font-size: 0.9rem;
+    li {
+        list-style: inherit;
+        margin-left: 1em;
+    }
 }
 
 .p-content a:hover,.p-archive a:hover,.p-copyright a:hover {
