@@ -339,12 +339,24 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     text-align: left;
     padding: $art-padding;
     margin-bottom: 20px;
-    background: $dark-purple;
+    background: $dark-float;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
 }
 
 .l-post .p-desc:hover {
     box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+.l-post .p-desc:before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    border-color: transparent #16212b #16212b transparent;
+    border-style: solid;
+    border-width: 6px 20px;
+    width: 0;
+    height: 0;
 }
 
 .p-content {
@@ -525,7 +537,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     left: 1220px;
     display: block;
     padding: 1.5em;
-    background: $dark-purple;
+    background: $dark-float;
     border-radius: 4px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
@@ -740,6 +752,10 @@ footer{
         padding: 2em $middle-space;
         left: 0;
         width: auto;
+    }
+
+    .l-post .p-desc:before {
+        display: none;
     }
 
     ul.search-result-list {
