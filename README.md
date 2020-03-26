@@ -17,6 +17,10 @@ An hexo theme with lofter style, it's very simple and cool!
 - Local Search
 - Suitable for screens of different sizes
 
+## Snapshots
+
+![home page](source/img/snap.png)
+
 ## Installation
 
 ``` sh
