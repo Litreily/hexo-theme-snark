@@ -2,6 +2,8 @@
 
 An hexo theme with lofter style, it's very simple and cool!
 
+![home page](source/img/snap.png)
+
 ## Features
 
 - Baidu Analytics
@@ -16,10 +18,6 @@ An hexo theme with lofter style, it's very simple and cool!
 - Fontawesome v4.7.0 icons
 - Local Search
 - Suitable for screens of different sizes
-
-## Snapshots
-
-![home page](source/img/snap.png)
 
 ## Installation
 
