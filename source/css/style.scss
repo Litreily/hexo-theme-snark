@@ -27,7 +27,7 @@ body, .l-content {
 }
 
 blockquote {
-    background-color: $dark-block;
+    background-color: $purple;
 }
 
 body,button,textarea,input,select,.m-hdimg .ttl a,.m-nav a,.l-pager a,.p-content,.l-post .p-desc a {
@@ -164,7 +164,7 @@ ul.search-result-list {
     width: 100%;
     height: $mobile-head-height;
     background: $purple;
-    box-shadow: 0 0 10px 1px $dark-purple;
+    box-shadow: 0 0 10px 1px $purple;
     text-align: center;
     z-index: 999;
 
@@ -205,7 +205,7 @@ ul.search-result-list {
     position: fixed;
     top: $mobile-head-height;
     background: $purple;
-    box-shadow: 1px 0px 10px 1px $dark-purple;
+    box-shadow: 1px 0px 10px 1px $purple;
     height: 100%;
     width: $mobile-menu-width;
     z-index: 99;
@@ -657,7 +657,7 @@ footer{
     font-size: 1.2em;
     &:hover {
         color: white;
-        box-shadow: 0 0 10px 2px $dark-purple;
+        box-shadow: 0 0 10px 2px $purple;
         transform: scale(1.1);
         -webkit-transform: scale(1.1);
     }
@@ -695,7 +695,7 @@ footer{
     &:hover {
         background-color: #DDF;
         a.fa::before {
-            color: $dark-purple;
+            color: $purple;
         }
     }
 }
