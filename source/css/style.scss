@@ -577,6 +577,24 @@ footer{
 }
 
 /*----------------------*/
+/*style of comment      */
+/*----------------------*/
+#valine-comment {
+    .v .vsys {
+        background: $dark-float;
+    }
+    .v .vcards .vcard .vh {
+        border-color: $dark-float;
+    }
+    .v .vcards .vcard .vcontent.expand:before {
+        background: linear-gradient(180deg,hsla(207, 32%, 22%, 0.6),hsla(208, 22%, 33%, .9));
+    }
+    .v .vcards .vcard .vcontent.expand:after {
+        background: $dark-float;
+    }
+}
+
+/*----------------------*/
 /*style of archive, tag */
 /* ,categories, aoout   */
 /*----------------------*/
