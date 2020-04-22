@@ -1,22 +1,22 @@
 if theme.valine.enable == true
     #valine-comment
         style(type='text/css').
-            .v * { color: #CECECE; }
-            .v a { color: #0F9FB4; }
-            .v a:hover { color: #216C73; }
-            .v li { list-style: inherit; }
-            .v .vwrap { border: 1px solid #223441; border-radius: 0; }
-            .v .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
-            .v .vbtn { border-radius: 0; color: #cecece; background: none; }
-            .v .vlist .vcard .vh { border-bottom-color: #293D4E; }
-            .v .vwrap .vheader .vinput { border-bottom-color: #223441; }
-            .v .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
-            .v code, .v pre,.v .vlist .vcard .vhead .vsys { background: #203240; }
-            .v code, .v pre { color: #F0F0F0; font-size: 95%; }
-            .v .vlist .vcard .vcontent.expand:before { background: linear-gradient(180deg,hsla(206,33%,19%,0),hsla(206,33%,19%,.9)); }
-            .v .vlist .vcard .vcontent.expand:after { background: hsla(206,33%,19%,.9); }
+            .night .v[data-class=v] a { color: #0F9FB4 !important; }
+            .night .v[data-class=v] a:hover { color: #216C73 !important; }
+            .night .v[data-class=v] li { list-style: inherit; }
+            .night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+            .night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+            .night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+            .night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+            .night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+            .night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+            .night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+            .night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+            .v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+            .night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+            .night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+
         #vcomment
-        script(src='//cdn1.lncld.net/static/js/3.0.4/av-min.js')
         script(src='//unpkg.com/valine@latest/dist/Valine.min.js')
         script.
           var notify = '#{ theme.valine.notify }' == true ? true : false;
