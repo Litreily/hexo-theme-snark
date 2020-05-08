@@ -468,13 +468,6 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     pre.prettyprint {
         width: initial;
         max-width: 95%;
-        &:before {
-            content: "code";
-            background: $bold-purple;
-            display: block;
-            margin: -1em -1em 1em;
-            padding: 0 1em;
-        }
     }
 
     pre code {
