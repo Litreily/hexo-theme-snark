@@ -26,6 +26,8 @@ customize_css: false  ## if enable customize_css, it will load file source/css/c
 fancybox: true  ## for image view
 copyright: true ## for CC BY-NC 4.0 license
 
+theme_color: '#2d4356'
+
 menu:
   - page: 归档
     directory: archives/
