@@ -6,6 +6,8 @@ html(lang='en')
             link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/customize.css')
         link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
         script(type='text/javascript', src=url_for(theme.js) + '/ready.js', async)
+        if theme.fancybox
+            link(rel='stylesheet', href='//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
 
     body.night
         #mobile-head.mobile-head

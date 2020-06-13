@@ -1,19 +1,38 @@
-//fork from https://github.com/tufu9441/maupassant-hexo/blob/master/source/js/fancybox.js
+// reference: https://fancyapps.com/fancybox/3/docs/
 $(document).ready(function() {
     $('img').each(function() {
         if ($(this).parent().hasClass('fancybox')) return;
         if ($(this).hasClass('nofancybox')) return;
         var alt = this.alt;
-        $(this).wrap('<a href="' + ($(this).attr('data-src') == null ? this.src : $(this).attr('data-src')) + '" title="' + alt + '" class="fancybox"></a>');
+        $(this).wrap('<a href="' + ($(this).attr('data-src') == null ? this.src : $(this).attr('data-src')) + '" data-fancybox="gallery"' + ' data-caption="' + alt + '" class="fancybox"></a>');
     });
     $(this).find('.fancybox').each(function(){
         $(this).attr('rel', 'article');
     });
 });
 $(document).ready(function() {
-    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],a[href$='.webp']").attr('rel', 'gallery').fancybox({
-        helpers : {
-        title: { type: 'inside'}
-        }
+    $('[data-fancybox=gallery]').fancybox({
+        buttons : [
+          'zoom',
+          //'share',
+          'slideShow',
+          'fullScreen',
+          //'download',
+          'thumbs',
+          'close'
+        ],
+        // Transition effect between slides
+        //
+        // Possible values:
+        //   false            - disable
+        //   "fade'
+        //   "slide'
+        //   "circular'
+        //   "tube'
+        //   "zoom-in-out'
+        //   "rotate'
+        //
+        transitionEffect: "slide",
     });
 });
+
