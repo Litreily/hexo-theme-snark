@@ -15,8 +15,8 @@ block content
         else
             h1.page-title= __('archive')
 
-        //Use lodash to classify posts. See https://lodash.com/docs#groupBy
-        each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
+        //- refer: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_groupby
+        each posts, year in page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
             h2= -year
             ul.list
                 for post in posts
