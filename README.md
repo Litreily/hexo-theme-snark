@@ -39,19 +39,14 @@ highlight:
 
 For beginner of `hexo`, you may need to know how to create general pages like `archives`, `categories`, `tags` and so on. If you already know that, please skip this step.
 
-For `linux`/`Mac` user or `windows` user with `wsl`, you can `cd` to blog root path and run below commands.
-
 ```bash
-for page in about archives categories tags
-do
-    [ ! -d source/$page ] && {
-        mkdir source/$page
-        echo -e '---\nlayout: page\ntitle: '$page'\n---\n' > source/$page/index.md
-    }
-done
+hexo new page archives
+hexo new page categories
+hexo new page tags
+hexo new page about
 ```
 
-running result as below (hidden something not related).
+Running above commands and you will get result as below (hidden something not related).
 
 ```bash
 $ tree -L 2 source
@@ -67,24 +62,6 @@ source
 └── tags
     └── index.md
 ```
-
-For other `windows` user, you need to create new folder under `blog` path with `cmd` or explorer.
-
-```cmd
-cd source
-mkdir about archives categories tags
-```
-
-Then create `index.md` for each pages, for examples, create file `source/archives/index.md` and write below info into it.
-
-```md
----
-layout: page
-title: archives
----
-```
-
-the `title` should changed to others like `categories`, `about` and `tags`. 
 
 ### Optional
 
