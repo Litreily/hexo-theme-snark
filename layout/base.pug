@@ -4,9 +4,8 @@ html(lang='en')
     block more
         if theme.customize_css
             link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/customize.css')
-        if page.layout == "post"
-            link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
-            script(type='text/javascript', src=url_for(theme.plugins) + '/prettify/prettify.js')
+        link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
+        script(type='text/javascript', src=url_for(theme.plugins) + '/prettify/prettify.js')
         script(type='text/javascript', src=url_for(theme.js) + '/ready.js', async)
         if theme.fancybox
             link(rel='stylesheet', href='//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
