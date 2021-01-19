@@ -472,7 +472,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
         max-width: 95%;
     }
 
-    pre code {
+    pre code.prettyprint {
         padding: 0;
         border-radius: 0 !important;
     }
@@ -480,6 +480,7 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     pre code.hljs {
         padding: 0.6em 0.8em;
         line-height: 1.6em;
+        border-radius: 0.4em !important;
     }
 
     table {
