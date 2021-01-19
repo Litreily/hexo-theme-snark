@@ -4,8 +4,21 @@ html(lang='en')
     block more
         if theme.customize_css
             link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/customize.css')
-        link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
-        script(type='text/javascript', src=url_for(theme.plugins) + '/prettify/prettify.js')
+        if theme.highlight.google_code_prettify
+            link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/prettify/doxy.css')
+            script(type='text/javascript', src=url_for(theme.plugins) + '/prettify/prettify.js')
+            script.
+                $(document).ready(function() {
+                    $("pre").addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                    $(".p-content code").addClass('prettyprint');
+                    prettyPrint(); 
+                });
+        else if theme.highlight.highlight
+            link(rel='stylesheet', type='text/css', href=url_for(theme.plugins) + '/highlight/'+ __(theme.highlight.highlight_theme) +'.min.css')
+            script(type='text/javascript', src=url_for(theme.plugins) + '/highlight/highlight.min.js')
+            script.
+                hljs.initHighlightingOnLoad();
+
         script(type='text/javascript', src=url_for(theme.js) + '/ready.js', async)
         if theme.fancybox
             link(rel='stylesheet', href='//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')

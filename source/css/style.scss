@@ -445,6 +445,8 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
         padding: 0 0.4em;
         margin: 0 0.2em;
         border-radius: 0.3em !important;
+        font-size: 10pt;
+        background: rgb(40,44,52);
     }
 
     pre {
@@ -473,6 +475,11 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
     pre code {
         padding: 0;
         border-radius: 0 !important;
+    }
+
+    pre code.hljs {
+        padding: 0.6em 0.8em;
+        line-height: 1.6em;
     }
 
     table {
@@ -778,7 +785,7 @@ footer{
         padding-right: 0;
     }
     
-    .p-content pre.prettyprint {
+    .p-content pre.prettyprint, pre code.hljs {
         max-width: initial;
         margin-left: -20px !important;
         margin-right: -20px !important;

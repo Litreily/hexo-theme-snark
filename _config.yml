@@ -25,6 +25,11 @@ local_search: true
 customize_css: false  ## if enable customize_css, it will load file source/css/customize.scss
 fancybox: true  ## for image view
 copyright: true ## for CC BY-NC 4.0 license
+highlight: ## only choose one of below items
+    google_code_prettify: false
+    highlight: true ## highlight.js
+    highlight_theme: 'atom-one-dark' ## refer: https://highlightjs.org/static/demo/
+        
 
 theme_color: '#2d4356'
 

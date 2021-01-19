@@ -5,7 +5,9 @@ An hexo theme with lofter style, it's very simple and cool!
 ## Features
 
 - Baidu Analytics
-- Code Highlight (Use Google Prettify)
+- Code Highlight
+    - Google Code Prettify
+    - Highlight.js (`default`)
 - Comment System (Only Valine as for now)
 - General pages
   - Archives
