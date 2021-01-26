@@ -446,7 +446,9 @@ a,.m-nav a:hover,.l-post .p-desc a:hover,.ttl a:hover,.m-nav .dot,.l-pager a:hov
         margin: 0 0.2em;
         border-radius: 0.3em !important;
         font-size: 10pt;
-        background: rgb(40,44,52);
+    }
+    code:not(.hljs) {
+        background: #213240;
     }
 
     pre {
