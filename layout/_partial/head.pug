@@ -5,12 +5,19 @@ head
     meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
     meta(content='telephone=no', name='format-detection')
     meta(name='description', content=config.description)
-    meta(name='theme-color', content=theme.theme_color)
+    meta(name='theme-color', content='#0f1923')
     meta(name='baidu-site-verification', content=theme.baidu.verification)
     block title
+    //- Google Fonts: Inter (body) + Noto Serif SC (headings) + JetBrains Mono (code)
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap')
+    //- Font Awesome 6
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css')
+    //- Theme stylesheet
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css')
     link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.png'))
-    link(rel='stylesheet', href='//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css')
-    script(type='text/javascript', src='//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+    //- jQuery
+    script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js')
     include baidu-analytics.pug
     block more

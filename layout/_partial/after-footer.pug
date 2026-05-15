@@ -1,5 +1,5 @@
-script(type='text/javascript', src=url_for(theme.js) + '/search.js')
-script(type='text/javascript', src=url_for(theme.js) + '/top.js')
+script(type='text/javascript', src=url_for(theme.js) + '/search.js', defer)
+script(type='text/javascript', src=url_for(theme.js) + '/top.js', defer)
 
 if theme.busuanzi
     script(type='text/javascript', src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
@@ -14,5 +14,19 @@ if theme.local_search == true
         searchFunc(path, 'local-search-input', 'local-search-result');
 
 if theme.fancybox == true
-    script(type='text/javascript', src='//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
-    script(type='text/javascript', src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
+    script(defer).
+        document.addEventListener('DOMContentLoaded', function () {
+            // Fancybox v4: auto-bind all content images (skip nofancybox class)
+            Fancybox.bind('.p-content img:not(.nofancybox)', {
+                groupAll: true,
+                Toolbar: {
+                    display: {
+                        left:  ['infobar'],
+                        middle: [],
+                        right: ['slideshow', 'download', 'fullscreen', 'close'],
+                    },
+                },
+                Thumbs: { type: 'classic' },
+                animated: true,
+            });
+        });

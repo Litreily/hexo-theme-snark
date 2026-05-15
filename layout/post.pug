@@ -12,8 +12,9 @@ block content
                 != page.content
             if theme.copyright
                 +post-copyright(page)
+        if ! page.notoc
+            include _partial/post-toc.pug
         +post-footer(page)
-        include _partial/post-toc.pug
 
     section.p-ext
         include _partial/post-jump.pug

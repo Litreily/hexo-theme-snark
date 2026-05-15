@@ -9,13 +9,16 @@ block content
         each post in page.posts.toArray()
             .l-post
                 .p-desc.box
-                    .p-pic
-                    //- title
+                    //- Cover image (set 'cover: /path/img.jpg' in post front-matter)
+                    if post.cover
+                        .p-pic
+                            a(href=url_for(post.path))
+                                img(src=post.cover alt=post.title loading='lazy')
+                    //- Title
                     h1.p-title
                         a(href=url_for(post.path))
                             +title(post)
-
-                    //- description
+                    //- Excerpt / description
                     if post.description
                         .p-content
                             != post.description
@@ -25,7 +28,7 @@ block content
                     else if post.content
                         - var br = 0
                         - for (var i = 0; i < 5; ++i) {
-                            - br = post.content.indexOf('\n',br+1)
+                            - br = post.content.indexOf('\n', br + 1)
                             if br < 0
                                 - break
                             if br > 150
@@ -37,9 +40,10 @@ block content
                         else
                             .p-content
                                 != post.content.substring(0, br)
-                    //- readmore
-                    p(class='p-readmore')
-                        a(href=url_for(post.path))= __('阅读更多 >>')
+                    //- Read more
+                    p.p-readmore
+                        a(href=url_for(post.path)) 阅读全文 →
 
                 +post-meta(post)
+
     include _partial/paginator.pug
